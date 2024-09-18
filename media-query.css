@@ -1,0 +1,20 @@
+@charset "UFT-8";
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    nav > a {
+        border: 3px solid transparent;
+        border-radius: 7px;
+        transition: .5s ease;
+    }
+
+    nav > a:hover {
+        border-color: var(--cor-azul-escura);
+        padding: 5px 10px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    
+}
