@@ -1,12 +1,24 @@
 @charset "UFT-8";
 
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    nav > a {
-        border: 3px solid transparent;
-        border-radius: 7px;
-        transition: .5s ease;
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
     }
+        
+    img {
+        max-width: 310px;
+    }
+    
+
+
+    nav {
+        flex-direction: row;
+        margin: 0;
+    }
+
+
 
     nav > a:hover {
         border-color: var(--cor-azul-escura);
@@ -16,5 +28,7 @@
 }
 
 @media screen and (min-width: 993px) {
-    
+    img#robo-voando {
+        display: block;
+    }
 }
