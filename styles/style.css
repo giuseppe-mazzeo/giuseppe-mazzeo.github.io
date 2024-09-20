@@ -19,13 +19,14 @@
 }
 
 :root {
+    --cor-cinza-clara: rgba(128, 128, 128, 0.199);
     --cor-azul-escura: rgb(11, 64, 107);
 }
 
 
 
 body {
-    background-color: rgba(128, 128, 128, 0.199);
+    background-color: var(--cor-cinza-clara);
 }
 
 
@@ -55,8 +56,6 @@ nav > a {
     transition: .5s ease;
 }
 
-
-
 nav div.linha-decorativa {
   width: 60%;
   height: 1px;
@@ -69,11 +68,13 @@ main {
     margin: 70px 20px;
 }
 
-main > section {
-    margin-left: 20px;
+
+
+section {
+    margin: 0 20px;
 }
 
-main > section > h1 {
+section > h1 {
     margin-left: -20px;
 }
 

@@ -1,0 +1,21 @@
+section#cidade > h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+
+img#quioto-foto {
+    height: auto;
+    width: calc(100% - 18px);
+    background-color: white;
+    padding: 7px;
+    border: 2px black solid;
+}
+
+
+
+iframe#quioto-mapa {
+    height: 400px;
+    width: calc(100% - 4px);
+    border: 2px black solid;
+}
