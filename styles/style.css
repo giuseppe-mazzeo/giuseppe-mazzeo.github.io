@@ -1,3 +1,5 @@
+/* Configuração CSS para todas as páginas deste projeto de DIW */
+
 @charset "UTF-8";
 
 @keyframes voar {
@@ -38,14 +40,14 @@ header {
 
 
 
-nav {
+nav#menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px 0 0 0;
 }
 
-nav > a {
+nav#menu > a {
     font-size: 1.6em;
     font-weight: bold;
     text-decoration: none;
@@ -56,7 +58,7 @@ nav > a {
     transition: .5s ease;
 }
 
-nav div.linha-decorativa {
+nav#menu div.linha-decorativa {
   width: 60%;
   height: 1px;
   background: linear-gradient(to right, transparent, var(--cor-azul-escura), transparent);
@@ -76,6 +78,17 @@ section {
 
 section > h1 {
     margin-left: -20px;
+}
+
+section > h2 {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+section p {
+    text-indent: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
 }
 
 

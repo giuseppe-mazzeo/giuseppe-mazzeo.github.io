@@ -12,7 +12,7 @@
     <header>
         <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
 
-        <nav>
+        <nav id="menu">
             <div class="linha-decorativa"></div>
             <a href="../index.html">Introdução</a>
             <div class="linha-decorativa"></div>
@@ -28,35 +28,77 @@
     </header>
 
     <main>
+        <section id="cidade">
+            <h1>Cidade de Quioto</h1>
+
+            <img id="quioto-foto" src="images/higashiyama.webp" alt="Foto de Quioto">
+        </section>
+
         <section id="multimedia">
-            <h1>Multimédias</h1>
-            <p>
-                <a href="#fotografias">Fotografias</a>
-                <a href="#video">Vídeo</a>
-                <a href="#poema">Poema</a>
-            </p>
+            <h2>Multimédias</h2>
+        
+            <nav id="menu-multimedia">
+                <ul>
+                    <li><a href="#fotografias">Fotografias</a></li>
+                    <li><a href="#video">Vídeo</a></li>
+                    <li><a href="#poema">Poema</a></li>
+                </ul>
+            </nav>
 
-            <h2 id="fotografias">Fotografias</h2>
-                <img src="" alt="Foto">
-                <img src="" alt="Foto">
-                <img src="" alt="Foto">
+            <h3 id="fotografias">Fotografias</h3>
+                <div id="grupo-fotos-quioto">
+                    <img src="images/otagi-nenbutsuji-pequena.jpg" alt="Templo de Otagi Nenbutsu-ji">
+                    <img src="images/fushimi-inari-pequena.webp" alt="Fushimi Inari">
+                    <img src="images/kinkakuji-pequena.webp" alt="Kinkaku-ji">
+                </div>
 
-            <h2 id="video">Vídeo</h2>
-                <p>
-                    Video
-                </p>
+            <h3 id="video">Vídeo</h3>
+                <div id="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <h2 id="poema">Poema</h2>
-                <p>
-                    poema aqui
-                </p>
+            <h3 id="poema">Poema</h3>
+                <div id="poema-enquadramento">
+                    <h4>Quioto, Onde o Tempo Dança</h4>
+                    
+                    <pre>
+    Entre montanhas que abraçam o céu,
+    Quioto repousa, serena, a brilhar.
+    Nos templos antigos, o silêncio ecoa,
+    Sussurros de eras que não querem passar.
+                    </pre>
+                    <pre>
+    O ouro reluz no Kinkaku-ji,
+    Espelhado nas águas do lago tranquilo.
+    Enquanto o vermelho flamejante do Fushimi Inari,
+    Guia os passos por um caminho divino.
+                    </pre>
+                    <pre>
+    Na primavera, as cerejeiras florescem,
+    Um mar de pétalas, suaves ao vento.
+    E no outono, as folhas queimam o chão,
+    Tingindo de rubro cada pedaço do tempo.
+                    </pre>
+                    <pre>
+    O verão traz festivais ao luar,
+    Lanternas flutuam, dançando com o mar.
+    E no inverno, a neve silencia a cidade,
+    Um manto branco de calma e verdade.
+                    </pre>
+                    <pre>
+    Nas ruas estreitas de Gion à noite,
+    Geishas deslizam com graça e leveza.
+    O passado e o presente se entrelaçam,
+    Num ritmo eterno de pura beleza.
+                    </pre>
+                    <pre>
+    Quioto, onde o antigo encontra o novo,
+    E o tempo não corre, apenas passeia.
+    Uma cidade que respira história e arte,
+    Em cada esquina, em cada centelha.
+                    </pre>
+                </div>
         </section>
     </main>
-
-    <footer>
-        <p>
-            DIW 2024
-        </p>
-    </footer>
 </body>
 </html>

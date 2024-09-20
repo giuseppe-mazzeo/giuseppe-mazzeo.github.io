@@ -1,8 +1,13 @@
-section#cidade > h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+/* Configurações para todos os 4 ficheiros html */
+
+section#cidade {
+    margin-bottom: 40px;
 }
 
+section#cidade > h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
 
 img#quioto-foto {
     height: auto;
@@ -13,6 +18,88 @@ img#quioto-foto {
 }
 
 
+
+/* Ficheiro multimedia.html */
+
+nav#menu-multimedia {
+    margin-bottom: 50px;
+}
+
+nav#menu-multimedia ul {
+    text-align: center;
+    list-style-position: inside;
+    list-style-type: circle;
+    padding: 0;
+}
+
+nav#menu-multimedia li {
+    padding-bottom: 5px;
+}
+
+nav#menu-multimedia a {
+    color: black;
+}
+
+
+
+section#multimedia h2 {
+    margin-bottom: 0px;
+}
+
+section#multimedia h3 {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+div#grupo-fotos-quioto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+div#grupo-fotos-quioto > img {
+    height: auto;
+    width: 150px;
+    background-color: white;
+    padding: 3px;
+    border: 1px black solid;
+}
+
+
+
+div#video {
+    position: relative;
+    padding: 20px;
+    padding-bottom: 56.861%;
+    margin: 0px -20px 30px -20px;
+}
+
+div#video > iframe {
+    position: absolute;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.395);
+    top: 5%;
+    left: 5%;
+    width: 91%;
+    height: 91%;
+}
+
+
+
+div#poema-enquadramento {
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+    border-radius: 4px 4px 4px 10px;
+}
+
+div#poema-enquadramento h4 {
+    text-align: center;
+}
+
+
+/* Ficheiro local.html */
 
 iframe#quioto-mapa {
     height: 400px;

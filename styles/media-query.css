@@ -1,3 +1,5 @@
+/* MediasQueries para tablet e telas maiores (pc, tv, entre outros) */
+
 @charset "UFT-8";
 
 
@@ -13,14 +15,14 @@
     
 
 
-    nav {
+    nav#menu {
         flex-direction: row;
         margin: 0;
     }
 
 
 
-    nav > a:hover {
+    nav#menu > a:hover {
         border-color: var(--cor-azul-escura);
         padding: 5px 10px;
         margin: 0;
