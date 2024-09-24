@@ -1,5 +1,19 @@
 /* Configurações para todos os 4 ficheiros html */
 
+.seta-introducao::before {
+    position: absolute;
+    content: "-";
+    transform: translateX(-16px);
+}
+
+.seta-introducao::after {
+    position: absolute;
+    content: "-";
+    transform: translateX(8px);
+}
+
+
+
 .seta::before {
     position: absolute;
     content: "»";
@@ -96,6 +110,8 @@ div#video > iframe {
     left: 5%;
     width: 91%;
     height: 91%;
+    max-width: 632.625px;
+    max-height: 357.212px;
 }
 
 
@@ -119,9 +135,12 @@ div#poema-enquadramento pre {
 /* Ficheiro local.html */
 
 iframe#quioto-mapa {
+    display: block;
     height: 400px;
-    width: calc(100% - 4px);
+    width: 100%;
+    max-width: 700px;
     border: 2px black solid;
+    margin: 0 auto;
 }
 
 
@@ -142,9 +161,3 @@ th {
     color: white;
     background-color: #444;
 }
-
-/*
-tr:hover {
-background-color: #f7f5f5;
-}
-*/
