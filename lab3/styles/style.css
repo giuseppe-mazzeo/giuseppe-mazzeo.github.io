@@ -1,0 +1,163 @@
+/* Configurações para todos os 4 ficheiros html */
+
+.seta-introducao::before {
+    position: absolute;
+    content: "-";
+    transform: translateX(-16px);
+}
+
+.seta-introducao::after {
+    position: absolute;
+    content: "-";
+    transform: translateX(8px);
+}
+
+
+
+.seta::before {
+    position: absolute;
+    content: "»";
+    transform: translateX(-20px);
+}
+
+
+
+section#cidade {
+    margin-bottom: 40px;
+}
+
+section#cidade > h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+img#quioto-foto {
+    height: auto;
+    width: calc(100% - 18px);
+    background-color: white;
+    padding: 7px;
+    border: 2px black solid;
+}
+
+
+
+/* Ficheiro multimedia.html */
+
+nav#menu-multimedia {
+    margin-bottom: 50px;
+}
+
+nav#menu-multimedia ul {
+    text-align: center;
+    list-style-position: inside;
+    list-style-type: circle;
+    padding: 0;
+}
+
+nav#menu-multimedia li {
+    padding-bottom: 5px;
+}
+
+nav#menu-multimedia a {
+    color: black;
+}
+
+
+
+section#multimedia h2 {
+    margin-bottom: 0px;
+}
+
+section#multimedia h3 {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+div#grupo-fotos-quioto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+div#grupo-fotos-quioto > a {
+    width: 150px;
+    background-color: white;
+    padding: 4px 4px 0 4px;
+    border: 1px black solid;
+}
+
+div#grupo-fotos-quioto > a > img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+div#video {
+    position: relative;
+    padding: 20px;
+    padding-bottom: 56.861%;
+    margin: 0px -20px 30px -20px;
+}
+
+div#video > iframe {
+    position: absolute;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.395);
+    top: 5%;
+    left: 5%;
+    width: 91%;
+    height: 91%;
+    max-width: 632.625px;
+    max-height: 357.212px;
+}
+
+
+
+div#poema-enquadramento {
+    width: 90%;
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+    border-radius: 4px 4px 4px 10px;
+}
+
+div#poema-enquadramento h4 {
+    text-align: center;
+}
+
+div#poema-enquadramento pre {
+    margin: 7px 0 6px 7px;
+}
+
+
+/* Ficheiro local.html */
+
+iframe#quioto-mapa {
+    display: block;
+    height: 400px;
+    width: 100%;
+    max-width: 700px;
+    border: 2px black solid;
+    margin: 0 auto;
+}
+
+
+
+/* Ficheiro info.html */
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #444;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    color: white;
+    background-color: #444;
+}

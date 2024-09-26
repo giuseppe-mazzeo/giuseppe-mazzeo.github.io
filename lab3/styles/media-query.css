@@ -1,0 +1,46 @@
+@media screen and (min-width: 768px) {
+    .seta-introducao::before {
+        display: none;
+    }
+
+    .seta-introducao::after {
+        display: none;
+    }
+
+
+
+    .seta::before {
+        display: none;
+    }
+
+
+
+    nav#menu a.seta {
+        text-decoration: underline;
+    }
+
+    
+
+    section#cidade {
+        text-align: center;
+    }
+
+
+
+    div#video {
+        padding-bottom: 372.087px;
+    }
+
+
+
+    tr:hover {
+        background-color: white;
+    }
+}
+
+
+/*
+@media screen and (min-width: 993px) {
+
+}
+*/
