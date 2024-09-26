@@ -23,24 +23,27 @@
     <main>
         <h1>Quioto Quizz</h1>
 
-        <section id="form-quizz">
-            <form action="https://postman-echo.com/get" method="get">
+        <section id="quizz">
+            <form id="quizz-form" action="https://postman-echo.com/get" method="get">
                 <fieldset>
                     <legend>Identificação</legend>
                     
                     <p>
-                        Nome: <input type="text" name="nome">
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome" placeholder="P.e.: João" autocomplete="on" autofocus required aria-describedby="Escrever seu nome">
                     </p>
                     <p>
-                        Apelido: <input type="text" name="apelido">
+                        <label for="apelido">Apelido: </label>
+                        <input type="text" name="apelido" id="apelido" placeholder="P.e.: Silva" autocomplete="on" required aria-describedby="Escrever seu apelido">
                     </p>
                     <p>
-                        Email: <input type="email" name="email">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="P.e.: joaosilva@exemplo.com" autocomplete="on" required aria-describedby="Escrever seu email">
                     </p>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Perguntas</legend>
+                    <legend>10 Perguntas sobre a cultura e geografia de Quioto</legend>
 
                     <div>
                         <!-- Kinkaku-ji -->
@@ -49,7 +52,7 @@
                         </p>
 
                         <p>
-                            <input type="text" name="p1" placeholder="Digite o nome do templo">
+                            <input type="text" name="p1" placeholder="Digite o nome do templo" size="18" maxlength="15">
                         </p>
                     </div>
 
@@ -85,18 +88,18 @@
                         </p>
 
                         <p>
-                            <input type="checkbox" name="p3" id="gion-matsuri" value="Gion Matsuri"> <label for="gion-matsuri">Gion Matsuri</label>
+                            <input type="checkbox" name="p3" id="gion-matsuri" value="GionMatsuri"> <label for="gion-matsuri">Gion Matsuri</label>
                         </p>
                         <p>
-                            <input type="checkbox" name="p3" id="aio-matsuri" value="Aoi Matsuri"> 
+                            <input type="checkbox" name="p3" id="aio-matsuri" value="AoiMatsuri"> 
                             <label for="aio-matsuri">Aoi Matsuri</label>
                         </p>
                         <p>
-                            <input type="checkbox" name="p3" id="tanabata-matsuri" value="Tanabata Matsuri"> 
+                            <input type="checkbox" name="p3" id="tanabata-matsuri" value="TanabataMatsuri"> 
                             <label for="tanabata-matsuri">Tanabata Matsuri</label>
                         </p>
                         <p>
-                            <input type="checkbox" name="p3" id="jidai-matsuri" value="Jidai Matsuri">
+                            <input type="checkbox" name="p3" id="jidai-matsuri" value="JidaiMatsuri">
                             <label for="jidai-matsuri">Jidai Matsuri</label>
                         </p>
                     </div>
@@ -108,7 +111,7 @@
                          </p>
 
                          <p>
-                            <input type="number" name="p4" min="1" max="3000"> d.C.
+                            <input type="number" name="p4" min="1" max="1000" step="1" placeholder="[0, 1000]"> d.C.
                          </p>
                     </div>
 
@@ -144,7 +147,7 @@
                         </p>
 
                         <p>
-                            <input type="number" name="p7" min="1" max="3000" step="1" placeholder="Digite um número">
+                            <input type="number" name="p7" min="1" max="3000" step="1" placeholder="[0, 3000]">
                         </p>
                     </div>
 
@@ -155,7 +158,8 @@
                         </p>
 
                         <p>
-                            <input type="range" name="p8" min="1" max="10">
+                            <input type="range" name="p8" min="1" max="10" value="0" oninput="document.getElementById('rangeValue').textContent=this.value" aria-label="Escala de visita a Quioto. 1 siginifica que não teria interesse em visitar Quioto. 10 seria um grande interesse da sua parte em visitá-la">
+                            <span id="rangeValue">1</span>
                         </p>
                     </div>
 
@@ -167,7 +171,7 @@
                         </p>
 
                         <p>
-                            <input type="date" name="p9">
+                            <input type="date" name="p9" aria-describedby="Em ordem da esquerda para a direita, dia, mês e ano.">
                         </p>
                     </div>
 
@@ -177,7 +181,7 @@
                         </p>
 
                         <p>
-                            <input type="file" name="p10" accept="image/*">
+                            <input type="file" name="p10" accept="image/*" aria-describedby="Escolha um ficheiro de uma imagem de Quioto.">
                         </p>
                     </div>
                 </fieldset>
@@ -186,9 +190,11 @@
                     <legend>Dê seu feedback</legend>
                 </fieldset>
 
-                <input type="submit">
-                <input type="reset" value="Reiniciar Quizz">
             </form>
+
+
+            <button type="submit" form="quizz-form">Enviar</button>
+            <button type="reset" form="quizz-form">Reiniciar</button>
         </section>
     </main>
 </body>
