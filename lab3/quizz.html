@@ -177,21 +177,57 @@
 
                     <div>
                         <p>
-                            Pergunta 10 - Carregue uma imagem do seu lugar favorito de Quioto ou de um ponto turístico que você gostaria de visitar.
+                            Pergunta 10 - De qual forma você iria se deslocar para Quioto?
+                        </p>
+
+                        <select name="p10" required>
+                            <option value="vazio" disabled selected>- - - - - - -</option>
+                            
+                            <option value="aviao">Avião</option>
+                            <option value="nadando">Nadando</option>
+                            <option value="navio">Navio</option>
+                            <option value="tapete-aladdin">Tapete do Aladdin</option>
+                            <option value="foguete">Foguete do Elon Musk</option>
+                            <option value="batmovel">BatMovel Subaquático</option>
+                            <option value="dragao">Dragão Vermelho Voador</option>
+                            <option value="carruagem">Carruagem Puxada por Unicórnios</option>
+                            <option value="bicicleta-hp">Bicicleta invisível do Harry Potter</option>
+                            <option value="de-lorean">Máquina do tempo do DeLorean</option>
+                            <option value="caminhao-sorvete">Caminhão de sorvete encantado</option>
+                            <option value="teletransporte-st">Teletransporte da Star Trek</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p>
+                            Pergunta 11 - Carregue uma imagem do seu lugar favorito de Quioto ou de um ponto turístico que você gostaria de visitar.
                         </p>
 
                         <p>
-                            <input type="file" name="p10" accept="image/*" aria-describedby="Escolha um ficheiro de uma imagem de Quioto.">
+                            <input type="file" name="p11" accept="image/*" aria-describedby="Escolha um ficheiro de uma imagem de Quioto.">
                         </p>
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Dê seu feedback</legend>
+
+                    <div>
+                        <p>
+                            <label for="comentario">Escreva um comentário!</label>
+                            <textarea name="feedback-comentario" id="comentario" maxlength="200" rows="4" cols="50" placeholder="Me diga o que achou do quizz e/ou possíveis melhorias..." aria-describedby="Campo de texto para escrever um comentário"></textarea>
+                        </p>
+
+                        <p>
+                            Dê uma nota em "estrelas" do que achou.
+                        </p>
+                        <p>
+                            <input type="range" name="feedback-estrela" min="1" max="5" value="1" required oninput="document.getElementById('estrela').textContent=this.value" aria-label="Escala de avaliação usando estrelas. Uma estrela significa uma nota ruim. 5 estrelas é a melhor nota.">
+                            <span id="estrela">1</span>
+                        </p>
+                    </div>
                 </fieldset>
-
             </form>
-
 
             <button type="submit" form="quizz-form">Enviar</button>
             <button type="reset" form="quizz-form">Reiniciar</button>
