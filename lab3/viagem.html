@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/media-query.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+    <title>Sua viagem a Quioto</title>
+</head>
+<body>
+    <header>
+        <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
+
+        <nav id="menu">
+            <div class="linha-decorativa"></div>
+            <a class="seta-introducao" href="index.html">Voltar pra Home</a>
+            <div class="linha-decorativa"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="viagem">
+            <form id="viagem-form" action="https://postman-echo.com/get" method="get">
+                <fieldset>
+                    <legend>Identificação</legend>
+                    
+                    <p>
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome" placeholder="P.e.: Joaquim" autocomplete="on" autofocus required aria-describedby="Escrever seu nome">
+                    </p>
+                    <p>
+                        <label for="apelido">Apelido: </label>
+                        <input type="text" name="apelido" id="apelido" placeholder="P.e.: Pereira" autocomplete="on" required aria-describedby="Escrever seu apelido">
+                    </p>
+                    <p>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="P.e.: joaquimpereira@exemplo.com" autocomplete="on" required aria-describedby="Escrever seu email">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados importantes para registrar sua viagem</legend>
+
+                    <div>
+                        <p>
+                            <label for="data-partida">Data de partida</label>
+                            <input type="date" name="data-partida" id="data-partida">
+                        </p>
+                        
+                        <p>
+                            <label for="data-regresso">Data de regresso</label>
+                            <input type="date" name="data-regresso" id="data-regresso">
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <label for="num-passageiros">Números de passageiros</label>
+                            <input type="number" name="num-passageiros
+                            " id="num-passageiros" min="1" max="9" value="1">
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <label for="transporte">Meio de transporte favorito (preço p.p.)</label>
+                            <select name="transporte" required>
+                                <option value="vazio" disabled selected>- - - - - - -</option>
+                            
+                                <option value="aviao">Avião - 2.572 €</option>
+                                <option value="nadando">Nadando - 0 €</option>
+                                <option value="navio">Navio - 800 €</option>
+                                <option value="tapete-aladdin">Tapete do Aladdin - 500 € (cuidado com o vento!)</option>
+                                <option value="foguete">Foguete do Elon Musk - 10.000 € + conta do Twitter</option>
+                                <option value="batmovel">BatMovel Subaquático - 1.200 € (opção de passeio com Robin)</option>
+                                <option value="dragao">Dragão Verde Voador - 6 esferas do dragão</option>
+                                <option value="carruagem">Carruagem Puxada por Unicórnios - 1.000 €</option>
+                                <option value="bicicleta-hp">Bicicleta invisível do Harry Potter - Pedra Filosofal</option>
+                                <option value="de-lorean">Máquina do tempo do DeLorean - 3.000 €</option>
+                                <option value="caminhao-sorvete">Caminhão de sorvete encantado - 250 € + gelado grátis</option>
+                                <option value="teletransporte-st">Teletransporte da Star Trek - 2.000 €</option>
+                                <option value="capitao-nemo">Submarino do Capitão Nemo - 1.800 €</option>
+                                <option value="burro-shrek">Nas costas do Burro do Shrek - fazer o Urro</option>
+                                <option value="camelo">Um camelo do Egito - 150 € (com direito a selfie)</option>
+                                <option value="pterodáctilo">Pterodáctilo com a asa quebrada - 400 €</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            Qual serviço deseja na sua viagem
+                            <input type="radio" name="servico" id="basico" value="basico">
+                            <label for="basico">Básico</label>
+
+                            <input type="radio" name="servico" id="premium" value="premium">
+                            <label for="premium">Premium</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <label for="pedidos-especiais">Tem algum pedido(s) especial(is) </label>
+                            <textarea name="pedidos-especiais" id="pedidos-especiais" maxlength="150" rows="4" cols="50" placeholder="Escreva aqui algum pedido especial..." aria-describedby="Campo de texto para escrever alguns pedidos especiais para a viagem."></textarea>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                            <label for="valor-gastar-pp">Qual o valor que espera gastar por pessoa na sua viagem</label>
+                            <input type="number" name="valor-gastar-pp" id="valor-gastar-pp" min="0" max="10000" step="50" value="0"> €
+                        </p>
+                        <p>
+                            <label for="valor-gastar-dia">E um valor por dia</label>
+                            <input type="number" name="valor-gastar-dia" id="valor-gastar-dia" min="0" max="1000" step="50" value="0"> €
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
+
+            <button type="submit" form="viagem-form">Enviar</button>
+            <button type="reset" form="viagem-form">Reiniciar</button>
+        </section>
+    </main>
+</body>
