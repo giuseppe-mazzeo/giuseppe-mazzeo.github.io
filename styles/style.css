@@ -33,6 +33,22 @@ body {
 
 
 
+a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+a:hover {
+    color: rgb(16, 147, 190);
+}
+
+
+
 header {
     display: flex;
     flex-direction: column;
@@ -73,7 +89,7 @@ main {
 
 
 section {
-    margin: 0 20px;
+    margin: 40px 20px;
 }
 
 section > h1 {
@@ -93,6 +109,33 @@ section p {
 
 
 
+section#labs li {
+    margin: 20px 0;
+}
+
+section#labs li a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-azul-escura);
+    padding: 5px 0px 5px 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.268);
+}
+
+section#labs li a span {
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 0 20px 20px 0;
+}
+
+section#labs li a span:hover {
+    color: white;
+    background-color: var(--cor-azul-escura);   
+}
+
+
+
 img#robo-voando {
     display: none;
     position: fixed;
@@ -101,4 +144,18 @@ img#robo-voando {
     width: 170px;
     height: auto;
     animation: voar 3s ease-in-out 10;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    margin: 0 -8px 0 -8px;
+}
+
+footer div {
+    font-style: italic;
+    padding: 8px 10px 0 10px;
 }
