@@ -1,28 +1,22 @@
 @media screen and (min-width: 768px) {
-    .seta-introducao::before {
+    .destaque-introducao::before {
         display: none;
     }
 
-    .seta-introducao::after {
-        display: none;
-    }
-
-
-
-    .seta::before {
+    .destaque-introducao::after {
         display: none;
     }
 
 
 
-    nav#menu a.seta {
+    .destaque-atual::before {
+        display: none;
+    }
+
+
+
+    nav#menu a.destaque-atual {
         text-decoration: underline;
-    }
-
-    
-
-    section#cidade {
-        text-align: center;
     }
 
 
@@ -38,6 +32,35 @@
     }
 }
 
+
+
+@media screen and (min-width: 892px) {
+    section#enquadramento {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    section#cidade {
+        max-width: 600px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+
+    
+    aside#fotografias {
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    aside#fotografias a {
+        margin: 0 0 10px 0;
+    }
+}
 
 /*
 @media screen and (min-width: 993px) {

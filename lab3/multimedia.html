@@ -14,59 +14,58 @@
         <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
 
         <nav id="menu">
-            <div class="linha-decorativa"></div>
-            <a class="seta-introducao" href="../index.html">Introdução</a>
-            <div class="linha-decorativa"></div>
+            <div></div>
+            <a class="destaque-introducao" href="../index.html">Introdução</a>
+            <div></div>
             <a href="index.html">Home</a>
-            <div class="linha-decorativa"></div>
+            <div></div>
             <a href="local.html">Localização</a>
-            <div class="linha-decorativa"></div>
-            <a class="seta" href="multimedia.html">Multimédia</a>
-            <div class="linha-decorativa"></div>
+            <div></div>
+            <a class="destaque-atual" href="multimedia.html">Multimédia</a>
+            <div></div>
             <a href="info.html">Informação</a>
-            <div class="linha-decorativa"></div>
+            <div></div>
         </nav>
     </header>
 
     <main>
-        <section id="cidade">
-            <h1>Cidade de Quioto</h1>
-            <iframe name="exibir-foto" src="images/higashiyama.webp" frameborder="0" width="920px" height="700px"></iframe>
+        <h2>Acesse rapidamente as Multimédias</h2>
+        <nav id="menu-multimedia">
+            <ul>
+                <li><a href="#fotografias">Fotografias</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#poema">Poema</a></li>
+            </ul>
+        </nav>
+
+        <section id="enquadramento">
+            <section id="cidade">
+                <h1>Cidade de Quioto</h1>
+                <iframe name="exibir-foto" src="images/higashiyama-medio.webp" frameborder="0" width="920px" height="700px"></iframe>
+            </section>
+
+            <aside id="fotografias">
+                <a href="images/otagi-nenbutsuji-grande.jpg" target="exibir-foto">
+                    <img src="images/otagi-nenbutsuji-pequena.jpg" alt="Templo de Otagi Nenbutsu-ji">
+                </a>
+                <a href="images/fushimi-inari-grande.webp" target="exibir-foto">
+                    <img src="images/fushimi-inari-pequena.webp" alt="Fushimi Inari">
+                </a>
+                <a href="images/kinkakuji-grande.webp" target="exibir-foto">
+                    <img src="images/kinkakuji-pequena.webp" alt="Kinkaku-ji">
+                </a>
+            </aside>
         </section>
+        
 
         <section id="multimedia">
-            <h2>Multimédias</h2>
-        
-            <nav id="menu-multimedia">
-                <ul>
-                    <li><a href="#fotografias">Fotografias</a></li>
-                    <li><a href="#video">Vídeo</a></li>
-                    <li><a href="#poema">Poema</a></li>
-                </ul>
-            </nav>
+            <div id="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
 
-            <h3 id="fotografias">Fotografias</h3>
-                <div id="grupo-fotos-quioto">
-                    <a href="images/otagi-nenbutsuji-grande.jpg" target="exibir-foto">
-                        <img src="images/otagi-nenbutsuji-pequena.jpg" alt="Templo de Otagi Nenbutsu-ji">
-                    </a>
-                    <a href="images/fushimi-inari-grande.webp" target="exibir-foto">
-                        <img src="images/fushimi-inari-pequena.webp" alt="Fushimi Inari">
-                    </a>
-                    <a href="images/kinkakuji-grande.webp" target="exibir-foto">
-                        <img src="images/kinkakuji-pequena.webp" alt="Kinkaku-ji">
-                    </a>
-                </div>
-
-            <h3 id="video">Vídeo</h3>
-                <div id="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-            <h3 id="poema">Poema</h3>
-                <div id="poema-enquadramento">
-                    <h4>Quioto, Onde o Tempo Dança</h4>
-                    
+            <div id="poema">
+                <h2>Quioto, Onde o Tempo Dança</h2>
+                
                 <pre>
 Entre montanhas que abraçam o céu,
 Quioto repousa, serena, a brilhar.
@@ -100,5 +99,14 @@ Em cada esquina, em cada centelha.</pre>
                 </div>
         </section>
     </main>
+
+    <footer>
+        <div>
+            Site desenvolvido por Giuseppe Mazzeo
+        </div>
+        <div>
+            Acesse o meu <a href="https://github.com/giuseppe-mazzeo/" target="_blank" rel="external">GitHub</a>
+        </div>
+    </footer>
 </body>
 </html>

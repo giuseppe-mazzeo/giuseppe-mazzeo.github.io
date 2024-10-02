@@ -23,6 +23,7 @@
 :root {
     --cor-cinza-clara: rgba(128, 128, 128, 0.199);
     --cor-azul-escura: rgb(11, 64, 107);
+    --cor-azul-clara:  rgb(16, 147, 190);
 }
 
 
@@ -44,7 +45,7 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(16, 147, 190);
+    color: var(--cor-azul-clara);
 }
 
 
@@ -74,7 +75,7 @@ nav#menu > a {
     transition: .5s ease;
 }
 
-nav#menu div.linha-decorativa {
+nav#menu > div {
   width: 60%;
   height: 1px;
   background: linear-gradient(to right, transparent, var(--cor-azul-escura), transparent);
@@ -125,7 +126,7 @@ section#labs li a {
 section#labs li a span {
     color: black;
     background-color: white;
-    padding: 5px 10px;
+    padding: 5px 13px 5px 10px;
     border-radius: 0 20px 20px 0;
 }
 

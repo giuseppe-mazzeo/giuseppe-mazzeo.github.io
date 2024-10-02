@@ -1,26 +1,30 @@
 /* Configurações para todos os 4 ficheiros html */
 
-.seta-introducao::before {
+.destaque-introducao::before {
     position: absolute;
     content: "-";
     transform: translateX(-16px);
 }
 
-.seta-introducao::after {
+.destaque-introducao::after {
     position: absolute;
     content: "-";
-    transform: translateX(8px);
+    transform: translateX(6px);
 }
 
 
 
-.seta::before {
+.destaque-atual::before {
     position: absolute;
     content: "»";
     transform: translateX(-20px);
 }
 
 
+section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
 section#cidade {
     margin-bottom: 40px;
@@ -31,9 +35,7 @@ section#cidade > h1 {
     margin-bottom: 5px;
 }
 
-
-
-img#quioto-foto {
+section#cidade > img {
     height: auto;
     width: calc(100% - 18px);
     background-color: white;
@@ -43,7 +45,35 @@ img#quioto-foto {
 
 
 
+section a.botao {
+    display: block;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor-azul-escura);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.245);
+}
+
+section a.botao:hover {
+    background-color: var(--cor-azul-clara);
+    border-color: black;
+}
+
+
 /* Ficheiro multimedia.html */
+
+main h2 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
 
 nav#menu-multimedia {
     margin-bottom: 50px;
@@ -62,36 +92,42 @@ nav#menu-multimedia li {
 
 nav#menu-multimedia a {
     color: black;
+    text-decoration: underline;
+}
+
+nav#menu-multimedia a:hover {
+    color: rgba(0, 0, 0, 0.586);
 }
 
 
 
-section#multimedia h2 {
-    margin-bottom: 0px;
+section#cidade {
+    flex: 1;
+    margin-bottom: 15px;
 }
 
-section#multimedia h3 {
-    font-size: 1.3em;
-    text-align: center;
-    margin-bottom: 5px;
+section#cidade iframe {
+    height: 400px;
+    max-width: 600px;
 }
 
 
 
-div#grupo-fotos-quioto {
+aside#fotografias {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 50px;
 }
 
-div#grupo-fotos-quioto > a {
+aside#fotografias > a {
     width: 150px;
     background-color: white;
     padding: 4px 4px 0 4px;
     border: 1px black solid;
+    margin: 0 5px;
 }
 
-div#grupo-fotos-quioto > a > img {
+aside#fotografias > a > img {
     height: auto;
     width: 100%;
 }
@@ -118,25 +154,26 @@ div#video > iframe {
 
 
 
-div#poema-enquadramento {
-    width: 90%;
+div#poema {
+    width: 355px;
     border-left: 2px black solid;
     border-bottom: 2px black solid;
     border-radius: 4px 4px 4px 10px;
+    margin: auto;
 }
 
-div#poema-enquadramento h4 {
+div#poema h4 {
     text-align: center;
 }
 
-div#poema-enquadramento pre {
+div#poema pre {
     margin: 7px 0 6px 7px;
 }
 
 
 /* Ficheiro local.html */
 
-iframe#quioto-mapa {
+iframe {
     display: block;
     height: 400px;
     width: 100%;
