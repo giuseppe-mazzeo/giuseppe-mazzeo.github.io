@@ -23,6 +23,7 @@
 :root {
     --cor-cinza-clara: rgba(128, 128, 128, 0.199);
     --cor-azul-escura: rgb(11, 64, 107);
+    --cor-azul-mais-escura: rgb(7, 44, 73);
     --cor-azul-clara:  rgb(16, 147, 190);
 }
 

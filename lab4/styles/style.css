@@ -1,0 +1,347 @@
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                    Configurações para todos od ficheiros html                     */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+@charset "UTF-8";
+
+
+
+:root {
+    --cor-cinza-clara: rgba(128, 128, 128, 0.199);
+    --cor-azul-escura: rgb(11, 64, 107);
+    --cor-azul-mais-escura: rgb(7, 44, 73);
+    --cor-azul-clara:  rgb(16, 147, 190);
+}
+
+
+
+* {
+    box-sizing: 0;
+}
+
+
+
+body {
+    background-color: var(--cor-cinza-clara);
+    margin: 0;
+}
+
+
+
+a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+a:hover {
+    color: var(--cor-azul-clara);
+}
+
+
+
+.destaque-introducao::before {
+    position: absolute;
+    content: "-";
+    transform: translateX(-16px);
+}
+
+.destaque-introducao::after {
+    position: absolute;
+    content: "-";
+    transform: translateX(6px);
+}
+
+
+
+.destaque-atual::before {
+    position: absolute;
+    content: "»";
+    transform: translateX(-20px);
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+header img {
+    height: auto;
+    width: 120px;
+}
+
+header h1 {
+    font-size: 3.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+
+nav#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+nav#menu > a {
+    font-size: 1.6em;
+    text-decoration: none;
+    color: gray;
+    border: 3px solid transparent;
+    border-radius: 7px;
+    margin: 5px 10px;
+    transition: .5s ease;
+}
+
+nav#menu > a.destaque-introducao, nav#menu > a.destaque-atual {
+    color: var(--cor-azul-escura);
+}
+
+nav#menu > div {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--cor-azul-escura), transparent);
+}
+
+
+
+main {
+    max-width: 900px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+main > section:last-child {
+    margin-bottom: 20px;
+}
+
+
+
+section {
+    margin: 0 20px 60px 20px;
+}
+
+section > h2 {
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+section p {
+    text-indent: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+section#cidade {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+section#cidade > h2:first-child {
+    font-size: 2.3em;
+    margin: 0 0 20px 0;
+}
+
+section#cidade > img {
+    height: auto;
+    width: calc(100% - 18px);
+    background-color: var(--cor-cinza-clara);
+    padding: 7px;
+    border: 2px black solid;
+}
+
+
+
+section a.botao {
+    display: block;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor-azul-escura);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.245);
+}
+
+section a.botao:hover {
+    background-color: var(--cor-azul-clara);
+    border-color: black;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: var(--cor-azul-mais-escura);
+    padding: 5px 5px 15px 5px;
+    border-top: 2px solid black;
+}
+
+footer div {
+    font-style: italic;
+    padding: 8px 10px 0 10px;
+}
+
+footer a:link, footer a:visited {
+    color: gray;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                            Ficheiro multimédia.html                               */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+main h2 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+
+nav#menu-multimedia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav#menu-multimedia a {
+    color: black;
+    background-color: white;
+    font-size: 1.1em;
+    text-decoration: underline;
+    padding: 5px 13px 0 13px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+nav#menu-multimedia a:hover {
+    color: rgba(0, 0, 0, 0.586);
+}
+
+
+
+section#cidade iframe {
+    max-width: 600px;
+    height: 400px;
+    background-color: var(--cor-cinza-clara);
+    padding: 7px;
+    border: 2px black solid;
+}
+
+
+
+aside#fotografias {
+    display: flex;
+    justify-content: center;
+}
+
+aside#fotografias > a {
+    width: 150px;
+    background-color: white;
+    padding: 4px 4px 0 4px;
+    border: 1px black solid;
+    margin: 0 5px;
+}
+
+aside#fotografias > a > img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+section#video {
+    display: flex;
+
+}
+
+section#video > iframe {
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+
+
+section#poema {
+    width: 355px;
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;
+    border-radius: 4px 4px 4px 10px;
+    margin: auto;
+}
+
+section#poema h4 {
+    text-align: center;
+}
+
+section#poema pre {
+    margin: 7px 0 6px 7px;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                               Ficheiro local.html                                 */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+iframe {
+    display: block;
+    height: 400px;
+    width: 100%;
+    max-width: 700px;
+    border: 2px black solid;
+    margin: 0 auto;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                               Ficheiro info.html                                  */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #444;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th {
+    color: white;
+    background-color: #444;
+}
+
+tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+tr:hover {
+    background-color: lightblue;
+}
