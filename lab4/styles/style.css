@@ -11,6 +11,8 @@
     --cor-azul-escura: rgb(11, 64, 107);
     --cor-azul-mais-escura: rgb(7, 44, 73);
     --cor-azul-clara:  rgb(16, 147, 190);
+    --fonte-cabecalho: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte-titulos: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -79,7 +81,7 @@ header img {
 
 header h1 {
     font-size: 3.3em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--fonte-cabecalho);
     text-align: center;
     letter-spacing: 2px;
     margin: 0;
@@ -122,11 +124,12 @@ main {
     padding: 10px;
     border-radius: 20px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.304);
 }
 
 main > section:last-child {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -137,15 +140,36 @@ section {
 
 section > h2 {
     font-size: 2em;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--fonte-titulos);
     text-align: center;
 }
 
 section p {
+    font-size: 1.03em;
     text-indent: 20px;
     text-align: justify;
     letter-spacing: 1px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+section a.botao {
+    display: block;
+    width: 200px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor-azul-escura);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.245);
+}
+
+section a.botao:hover {
+    background-color: var(--cor-azul-clara);
+    border-color: black;
 }
 
 
@@ -166,28 +190,6 @@ section#cidade > img {
     background-color: var(--cor-cinza-clara);
     padding: 7px;
     border: 2px black solid;
-}
-
-
-
-section a.botao {
-    display: block;
-    width: 200px;
-    text-align: center;
-    color: white;
-    background-color: var(--cor-azul-escura);
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 20px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.245);
-}
-
-section a.botao:hover {
-    background-color: var(--cor-azul-clara);
-    border-color: black;
 }
 
 
@@ -216,9 +218,12 @@ footer a:link, footer a:visited {
 /*                            Ficheiro multimédia.html                               */
 /* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
 
-main h2 {
-    text-align: center;
-    margin-bottom: 0px;
+
+
+main > h2 {
+    font-size: 2em;
+    font-family: var(--fonte-titulos);
+    margin: 0 0 -7px 25px;
 }
 
 
@@ -275,8 +280,8 @@ aside#fotografias > a > img {
 
 
 section#video {
-    display: flex;
-
+    border-top: 2px solid black;
+    padding-top: 20px;
 }
 
 section#video > iframe {
