@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Multimédias</title>
 </head>
 <body>
@@ -29,16 +30,15 @@
     </header>
 
     <nav id="menu-multimedia">
-        <a href="#fotografias">Fotografias</a>
-        <a href="#video">Vídeo</a>
-        <a href="#poema">Poema</a>
+        <a href="#fts"><span class="material-symbols-outlined">photo_library</span></a>
+        <a href="#vd"><span class="material-symbols-outlined">subscriptions</span></a>
+        <a href="#pm"><span class="material-symbols-outlined">edit_note</span></a>
     </nav>
 
     <main>
+        <h2 id="fts">Fotografias</h2>
         <section id="enquadramento">
             <section id="cidade" style="flex: 1; margin-bottom: 15px;">
-                <h2>Cidade de Quioto</h2>
-
                 <iframe name="exibir-foto" src="images/higashiyama-medio.webp" frameborder="0" width="920px" height="700px"></iframe>
             </section>
 
@@ -55,14 +55,16 @@
             </aside>
         </section>
 
-        <h2>Vídeo</h2>
+        <h2 id="vd">Vídeo</h2>
         <section id="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
+        <h2 id="pm">Poema</h2>
         <section id="poema">
-                <h2>Quioto, Onde o Tempo Dança</h2>
-                
+            <h2>Quioto, Onde o Tempo Dança</h2>
+            
+            <div>
                 <pre>
 Entre montanhas que abraçam o céu,
 Quioto repousa, serena, a brilhar.
@@ -71,7 +73,7 @@ Sussurros de eras que não querem passar.</pre>
                 <pre>
 O ouro reluz no Kinkaku-ji,
 Espelhado nas águas do lago tranquilo.
-Enquanto o vermelho flamejante do Fushimi Inari,
+Enquanto o vermelho do Fushimi Inari, <!-- vermelho flamejante -->
 Guia os passos por um caminho divino.</pre>
                 <pre>
 Na primavera, as cerejeiras florescem,
@@ -93,7 +95,8 @@ Quioto, onde o antigo encontra o novo,
 E o tempo não corre, apenas passeia.
 Uma cidade que respira história e arte,
 Em cada esquina, em cada centelha.</pre>
-            </section>
+            </div>
+        </section>
     </main>
 
     <footer>

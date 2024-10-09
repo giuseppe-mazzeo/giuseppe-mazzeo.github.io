@@ -218,16 +218,6 @@ footer a:link, footer a:visited {
 /*                            Ficheiro multimédia.html                               */
 /* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
 
-
-
-main > h2 {
-    font-size: 2em;
-    font-family: var(--fonte-titulos);
-    margin: 0 0 -7px 25px;
-}
-
-
-
 nav#menu-multimedia {
     display: flex;
     justify-content: space-evenly;
@@ -236,15 +226,32 @@ nav#menu-multimedia {
 nav#menu-multimedia a {
     color: black;
     background-color: white;
-    font-size: 1.1em;
     text-decoration: underline;
-    padding: 5px 13px 0 13px;
+    padding: 5px 17px 0 17px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    margin-bottom: -10px;
 }
 
 nav#menu-multimedia a:hover {
     color: rgba(0, 0, 0, 0.586);
+}
+
+nav#menu-multimedia span {
+    font-size: 2.3em;
+}
+
+
+
+main > h2 {
+    color: var(--cor-azul-escura);
+    font-size: 2em;
+    font-family: var(--fonte-titulos);
+    margin: 0 0 -6px 25px;
+}
+
+main > h2:first-child {
+    margin-top: 40px;
 }
 
 
@@ -259,6 +266,12 @@ section#cidade iframe {
 
 
 
+section#enquadramento {
+    border-top: 3px solid var(--cor-azul-escura);
+}
+
+
+
 aside#fotografias {
     display: flex;
     justify-content: center;
@@ -266,7 +279,7 @@ aside#fotografias {
 
 aside#fotografias > a {
     width: 150px;
-    background-color: white;
+    background-color: var(--cor-cinza-clara);
     padding: 4px 4px 0 4px;
     border: 1px black solid;
     margin: 0 5px;
@@ -280,7 +293,7 @@ aside#fotografias > a > img {
 
 
 section#video {
-    border-top: 2px solid black;
+    border-top: 3px solid var(--cor-azul-escura);
     padding-top: 20px;
 }
 
@@ -292,19 +305,23 @@ section#video > iframe {
 
 
 section#poema {
-    width: 355px;
-    border-left: 2px black solid;
-    border-bottom: 2px black solid;
-    border-radius: 4px 4px 4px 10px;
+    border-top: 3px solid var(--cor-azul-escura);
+    margin-bottom: 30px;
+}
+
+section#poema > h2 {
+    margin-bottom: -15px;
+}
+
+section#poema div {
+    max-width: 450px;
+    background-color: var(--cor-cinza-clara);
+    padding: 30px 10px 10px 10px;
     margin: auto;
 }
 
-section#poema h4 {
-    text-align: center;
-}
-
 section#poema pre {
-    margin: 7px 0 6px 7px;
+    margin: 9px 0 6px 9px;
 }
 
 
