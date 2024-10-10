@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/media-query.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+    <title>Quizz sobre Quioto</title>
+</head>
+<body>
+    <header>
+        <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
+
+        <nav id="menu">
+            <div class="linha-decorativa"></div>
+            <a class="seta-introducao" href="index.html">Sair do Quizz</a>
+            <div class="linha-decorativa"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Quioto Quizz</h1>
+
+        <section id="quizz">
+            <form id="quizz-form" action="https://postman-echo.com/get" method="get">
+                <fieldset>
+                    <legend>Identificação</legend>
+                    
+                    <p>
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome" placeholder="P.e.: João" autocomplete="on" autofocus required aria-describedby="Escrever seu nome">
+                    </p>
+                    <p>
+                        <label for="apelido">Apelido: </label>
+                        <input type="text" name="apelido" id="apelido" placeholder="P.e.: Silva" autocomplete="on" required aria-describedby="Escrever seu apelido">
+                    </p>
+                    <p>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="P.e.: joaosilva@exemplo.com" autocomplete="on" required aria-describedby="Escrever seu email">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>10 Perguntas sobre a cultura e geografia de Quioto</legend>
+
+                    <div>
+                        <!-- Kinkaku-ji -->
+                        <p>
+                            Pergunta 1 - Qual é o nome do famoso templo dourado em Quioto?
+                        </p>
+
+                        <p>
+                            <input type="text" name="p1" placeholder="Digite o nome do templo" size="18" maxlength="15">
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Primavera -->
+                        <p>
+                            Pergunta 2 - Em qual estação do ano as cerejeiras florescem em Quioto?
+                        </p>
+
+                        <p>
+                            <input type="radio" name="p2" id="primavera" value="Primavera">
+                            <label for="primavera">Primavera</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="p2" id="verao" value="Verao">
+                            <label for="verao">Verão</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="p2" id="outono" value="Outono">
+                            <label for="outono">Outono</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="p2" id="inverno" value="Inverno">
+                            <label for="inverno">Inverno</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Gion Matsuri, Aoi Matsuri, Jidai Matsuri -->
+                         <!-- Tanabata Matsuri não é um festival específico de Quioto, embora seja celebrado em várias partes do Japão. -->
+                        <p>
+                            Pergunta 3 - Quais desses eventos são festivais tradicionais de Quioto?
+                        </p>
+
+                        <p>
+                            <input type="checkbox" name="p3" id="gion-matsuri" value="GionMatsuri"> <label for="gion-matsuri">Gion Matsuri</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="p3" id="aio-matsuri" value="AoiMatsuri"> 
+                            <label for="aio-matsuri">Aoi Matsuri</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="p3" id="tanabata-matsuri" value="TanabataMatsuri"> 
+                            <label for="tanabata-matsuri">Tanabata Matsuri</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="p3" id="jidai-matsuri" value="JidaiMatsuri">
+                            <label for="jidai-matsuri">Jidai Matsuri</label>
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- 794 -->
+                         <p>
+                            Pergunta 4 - Quando Quioto foi fundada como capital imperial do Japão?
+                         </p>
+
+                         <p>
+                            <input type="number" name="p4" min="1" max="1000" step="1" placeholder="[0, 1000]"> d.C.
+                         </p>
+                    </div>
+
+                    <div>
+                        <!-- 18:00-19:00 -->
+                         <!-- 18:00 ou 19:00, dependendo do festival. Os festivais noturnos geralmente começam no início da noite. -->
+                        <p>
+                            Pergunta 5 - Se você fosse a um festival noturno em Quioto, que horas começaria?
+                        </p>
+
+                        <p>
+                            <input type="time" name="p5">
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Tons de vermelho e laranja #FF4500 -->
+                         <!-- Tons de vermelho e laranja, representados por cores como #FF4500 (laranja avermelhado). Durante o outono, as folhas de ácer (momiji) ficam rubras. -->
+                        <p>
+                            Pergunta 6 - Qual cor mais representa o outono em Quioto, quando as folhas mudam de cor?
+                        </p>
+
+                        <p>
+                            <input type="color" name="p6" value="#ffffff">
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- ~2000 -->
+                         <!-- Cerca de 2.000 templos e santuários. Quioto é famosa por seu grande número de templos budistas e santuários xintoístas. -->
+                        <p>
+                            Pergunta 7 - Quantos templos e santuários existem em Quioto?
+                        </p>
+
+                        <p>
+                            <input type="number" name="p7" min="1" max="3000" step="1" placeholder="[0, 3000]">
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- 1-Pouco 10-Muito -->
+                        <p>
+                            Pergunta 8 - Em uma escala de 1 a 10, o quanto você gostaria de visitar Quioto?
+                        </p>
+
+                        <p>
+                            <input type="range" name="p8" min="1" max="10" value="1" oninput="document.getElementById('rangeValue').textContent=this.value" aria-label="Escala de visita a Quioto. 1 siginifica que não teria interesse em visitar Quioto. 10 seria um grande interesse da sua parte em visitá-la">
+                            <span id="rangeValue">1</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- 17 de dezembro de 1994 -->
+                         <!-- Essa data é importante, pois o Templo Kiyomizu-dera, um dos mais famosos em Quioto, foi adicionado à lista de Patrimônios Mundiais da UNESCO como parte dos "Monumentos Históricos da Antiga Quioto". -->
+                        <p>
+                            Pergunta 9 - Em que data o Templo Kiyomizu-dera foi registrado como Patrimônio Mundial da UNESCO?
+                        </p>
+
+                        <p>
+                            <input type="date" name="p9" aria-describedby="Em ordem da esquerda para a direita, dia, mês e ano.">
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <p>
+                            Pergunta 10 - Carregue uma imagem do seu lugar favorito de Quioto ou de um ponto turístico que você gostaria de visitar.
+                        </p>
+
+                        <p>
+                            <input type="file" name="p10" accept="image/*" aria-describedby="Escolha um ficheiro de uma imagem de Quioto.">
+                        </p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dê seu feedback</legend>
+
+                    <div>
+                        <p>
+                            <label for="comentario">Escreva um comentário!</label>
+                            <textarea name="feedback-comentario" id="comentario" maxlength="200" rows="4" cols="50" placeholder="Me diga o que achou do quizz e/ou possíveis melhorias..." aria-describedby="Campo de texto para escrever um comentário"></textarea>
+                        </p>
+
+                        <p>
+                            Dê uma nota em "estrelas" do que achou.
+                        </p>
+                        <p>
+                            <input type="range" name="feedback-estrela" min="1" max="5" value="1" required oninput="document.getElementById('estrela').textContent=this.value" aria-label="Avaliação do quizz de 1 a 5 usando estrelas. Uma estrela significa uma nota ruim. 5 estrelas é a melhor nota.">
+                            <span id="estrela">1</span>
+                        </p>
+                    </div>
+                </fieldset>
+            </form>
+
+            <button type="submit" form="quizz-form">Enviar</button>
+            <button type="reset" form="quizz-form">Reiniciar</button>
+        </section>
+    </main>
+</body>

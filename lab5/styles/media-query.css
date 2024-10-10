@@ -1,0 +1,56 @@
+@media screen and (min-width: 768px) {
+    div#video {
+        padding-bottom: 372.087px;
+    }
+}
+
+
+
+@media screen and (min-width: 892px) {
+    section#enquadramento {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+
+    section#cidade {
+        max-width: 600px;
+    }
+
+
+    
+    aside#fotografias {
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+
+    aside#fotografias a {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+
+@media screen and (min-width: 993px) {
+    .destaque-introducao::before {
+        display: none;
+    }
+
+    .destaque-introducao::after {
+        display: none;
+    }
+
+
+
+    .destaque-atual::before {
+        display: none;
+    }
+
+
+
+    nav#menu a.destaque-atual {
+        text-decoration: underline;
+    }
+}
