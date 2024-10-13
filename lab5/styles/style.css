@@ -283,6 +283,8 @@ aside#fotografias > a {
     padding: 4px 4px 0 4px;
     border: 1px black solid;
     margin: 0 5px;
+
+    cursor: zoom-in;
 }
 
 aside#fotografias > a > img {
@@ -366,4 +368,28 @@ tr:nth-child(2n) {
 
 tr:hover {
     background-color: lightblue;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                          Ficheiro pontosdeinteresse.html                          */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+.maiusculo {
+    text-transform: uppercase;
+}
+
+.decorar-linha li:nth-child(2n) {
+    color: var(--cor-azul-clara);
+}
+
+.decorar-ul {
+    font-size: 2em;
+    list-style-type: circle;
+}
+
+.decorar-ol {
+    font-size: 2em;
+    list-style-type: upper-roman;
 }
