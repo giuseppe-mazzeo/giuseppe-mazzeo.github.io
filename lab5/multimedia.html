@@ -10,16 +10,15 @@
 </head>
 <body>
     <header>
-        <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
-
         <h1>Quioto</h1>
 
         <nav id="menu">
-            <a class="destaque-introducao" href="../index.html">Introdução</a>
-            <a href="index.html">Home</a>
+            <a class="destaque-atual" href="index.html">Home</a>
             <a href="local.html">Localização</a>
             <a class="destaque-atual" href="multimedia.html">Multimédia</a>
             <a href="info.html">Informação</a>
+            <a class="destaque-introducao" href="../index.html">Introdução</a>
+        </nav>
         </nav>
     </header>
 
@@ -30,36 +29,36 @@
     </nav>
 
     <main>
-        <article id="enquadramento" class="elegante">
-            <h2 id="fts">Fotografias</h2>
+        <article>
+            <h2 id="fts" class="elegante">Fotografias</h2>
             
-            <div>
+            <section  id="enquadramento">
                 <iframe name="exibir-foto" src="images/higashiyama-medio.webp" frameborder="0" width="920px" height="700px"></iframe>
-            </div>
-
-            <figure>
-                <a href="images/otagi-nenbutsuji-grande.jpg" target="exibir-foto">
-                    <img src="images/otagi-nenbutsuji-pequena.jpg" alt="Templo de Otagi Nenbutsu-ji">
-                </a>
-                <a href="images/fushimi-inari-grande.webp" target="exibir-foto">
-                    <img src="images/fushimi-inari-pequena.webp" alt="Fushimi Inari">
-                </a>
-                <a href="images/kinkakuji-grande.webp" target="exibir-foto">
-                    <img src="images/kinkakuji-pequena.webp" alt="Kinkaku-ji">
-                </a>
-            </figure>
+    
+                <figure>
+                    <a href="images/otagi-nenbutsuji-grande.jpg" target="exibir-foto">
+                        <img src="images/otagi-nenbutsuji-pequena.jpg" alt="Templo de Otagi Nenbutsu-ji">
+                    </a>
+                    <a href="images/fushimi-inari-grande.webp" target="exibir-foto">
+                        <img src="images/fushimi-inari-pequena.webp" alt="Fushimi Inari">
+                    </a>
+                    <a href="images/kinkakuji-grande.webp" target="exibir-foto">
+                        <img src="images/kinkakuji-pequena.webp" alt="Kinkaku-ji">
+                    </a>
+                </figure>
+            </section>
         </article>
 
-        <article class="elegante">
-            <h2 id="vd">Vídeo</h2>
+        <article>
+            <h2 id="vd" class="elegante">Vídeo</h2>
             
-            <div id="video">
+            <aside id="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/arOQ7slh3pM?si=D1Ir_aRNhjc4bbK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            </aside>
         </article>
 
-        <article id="poema" class="elegante">
-            <h2 id="pm">Poema</h2>
+        <article id="poema">
+            <h2 id="pm" class="elegante">Poema</h2>
             
             <h3>Quioto, Onde o Tempo Dança</h3>
             
