@@ -223,7 +223,7 @@ footer a {
 /*                            Ficheiro multimédia.html                               */
 /* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
 
-nav#menu-multimedia {
+nav#menu-multi {
     display: flex;
     justify-content: space-evenly;
     max-width: 500px;
@@ -233,7 +233,7 @@ nav#menu-multimedia {
     background-color: var(--cor-branco-antigo);
 }
 
-nav#menu-multimedia a {
+nav#menu-multi a {
     padding: 7px 7px 0 7px;
     border: 2px solid var(--cor-preto-com-carbono);
     border-radius: 15px;
@@ -242,13 +242,13 @@ nav#menu-multimedia a {
     background-color: white;
 }
 
-nav#menu-multimedia a:hover {
+nav#menu-multi a:hover {
     color: white;
     background-color: var(--cor-preto-com-carbono);
     transition: .5s ease;
 }
 
-nav#menu-multimedia span {
+nav#menu-multi span {
     font-size: 2em;
 }
 
@@ -297,20 +297,20 @@ aside#video > iframe {
 
 
 
-article#poema > h3 {
+article#poema-multi > h3 {
     margin-bottom: -15px;
     font-size: 1.4em;
     text-align: center;
 }
 
-article#poema aside {
+article#poema-multi aside {
     max-width: 450px;
     padding: 30px 10px 10px 10px;
     margin: auto;
     background-color: var(--cor-branco-fantasma);
 }
 
-article#poema aside p {
+article#poema-multi aside p {
     background-color: transparent;
 }
 

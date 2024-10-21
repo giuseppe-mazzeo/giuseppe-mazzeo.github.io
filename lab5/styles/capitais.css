@@ -3,24 +3,30 @@
 /* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
 
 @charset "UTF-8";
-    
+
+
 
 :root {
-    --cor-cinza-clara: rgba(128, 128, 128, 0.199);
-    --cor-azul-escura: rgb(11, 64, 107);
-    --cor-azul-mais-escura: rgb(7, 44, 73);
-    --cor-azul-clara:  rgb(16, 147, 190);
-    --fonte-cabecalho: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --fonte-titulos: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --cor-bege-claro: #F2F0D8;
+    --cor-marrom-claro: #BF8A49;
+    --cor-marrom-avermelhado: #A65A2E;
+    --cor-marrom-escuro: #401201;
+    --cor-marrom-avermelhado-escuro: #260101;
+
+    --fonte-titulo-principal: "Lobster", sans-serif;
+    --fonte-titulo: "Poppins", sans-serif;
+    --fonte-paragrafo: "Poppins", sans-serif;
 }
 
 
 
 * {
-    margin:0;  
-    padding:0;  
-    box-sizing: border-box;
+    box-sizing: 0;
+    padding: 0;  
+    margin: 0;  
+    font-family: var(--fonte-paragrafo);
 }
+
 
 
 
@@ -30,8 +36,9 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-
     height: 10vh;
+    color: white;
+    background-color: var(--cor-marrom-escuro);
 }
 
 header a {
@@ -62,11 +69,20 @@ header a:active {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 90vh;
+    padding-top: 20px;
+
+
+    background-image: url('../images/capitais/bandeiras.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
 }
+
 
 
 
