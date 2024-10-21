@@ -1,0 +1,18 @@
+@media screen and (min-width: 892px) {
+    section#enquadramento {
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    section#enquadramento > figure {
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+
+    section#enquadramento > figure a {
+        margin: 0 0 10px 0;
+    }
+}

@@ -1,0 +1,404 @@
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                    Configurações para todos od ficheiros html                     */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;600&display=swap');
+
+:root {
+    --cor-bege-claro: #F2F0D8;
+    --cor-marrom-claro: #BF8A49;
+    --cor-marrom-avermelhado: #A65A2E;
+    --cor-marrom-escuro: #401201;
+    --cor-marrom-avermelhado-escuro: #260101;
+
+    --cor-preto-envelhecido: #666666;
+    --cor-preto-com-carbono: #4D4D4D;
+    --cor-branco-fantasma: #D3D3D3;
+    --cor-branco-antigo: #EAEAEA;
+
+    --fonte-titulo-principal: "Lobster", sans-serif;
+    --fonte-titulo: "Poppins", sans-serif;
+    --fonte-paragrafo: "Poppins", sans-serif;
+}
+
+
+
+* {
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonte-paragrafo);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    background-color: var(--cor-rosa-claro-acinzentado);
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+    background-color: var(--cor-branco-antigo);
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: var(--fonte-titulo-principal);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+
+nav#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav#menu > a {
+    padding: 0 7px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    margin: 0 3px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: var(--cor-preto-envelhecido);
+}
+
+nav#menu > a:hover {
+    color: white;
+    background-color: var(--cor-preto-envelhecido);
+    transition: .5s ease;
+}
+
+nav#menu > a.destaque-introducao {
+    color: white;
+    background-color: var(--cor-preto-envelhecido);
+}
+
+nav#menu > a.destaque-introducao:hover {
+    border-color: var(--cor-preto-envelhecido);
+    color: var(--cor-preto-envelhecido);
+    background-color: var(--cor-branco-antigo);
+    transition: .5s ease;
+}
+
+nav#menu > a.destaque-atual {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+main {
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+main article:last-child {
+    margin-bottom: 110px;
+}
+
+
+
+article {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+article > h2 {
+    font-size: 2.6em;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    text-align: center;
+}
+
+article p {
+    padding: 3px 6px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-indent: 20px;
+    text-align: justify;
+    letter-spacing: 1.2px;
+    word-spacing: 3px;
+    line-height: 1.2;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.864);
+}
+
+
+
+.botao {
+    display: block;
+    width: 200px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.245);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-preto-com-carbono);
+}
+
+.botao:hover {
+    color: var(--cor-preto-com-carbono);
+    border-color: var(--cor-preto-com-carbono);
+    background-color: var(--cor-branco-fantasma);
+}
+
+
+
+.fundo-quioto {
+    height: 85vh;
+    padding-top: 20px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-shadow: 3px 3px 5px black;
+    color: white;
+    background-color: black;
+    background-image: url('../images/quioto-fundo.jpeg');
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.fundo-quioto-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80%;
+    color: black;
+    text-shadow: none;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-top: 2px solid var(--cor-branco-fantasma);
+    font-style: italic;
+}
+
+footer img {
+    width: 160px;
+    height: auto;
+}
+
+footer a {
+    color: gray;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                            Ficheiro multimédia.html                               */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+nav#menu-multi {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 500px;
+    padding: 7px 0;
+    border-radius: 50px;
+    margin: 20px auto;
+    background-color: var(--cor-branco-antigo);
+}
+
+nav#menu-multi a {
+    padding: 7px 7px 0 7px;
+    border: 2px solid var(--cor-preto-com-carbono);
+    border-radius: 15px;
+    text-decoration: underline;
+    color: black;
+    background-color: white;
+}
+
+nav#menu-multi a:hover {
+    color: white;
+    background-color: var(--cor-preto-com-carbono);
+    transition: .5s ease;
+}
+
+nav#menu-multi span {
+    font-size: 2em;
+}
+
+
+
+section#enquadramento > iframe {
+    display: block;
+    max-width: 600px;
+    height: 400px;
+    padding: 3px;
+    border: 2px solid black;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+section#enquadramento > figure {
+    display: flex;
+    justify-content: center;
+}
+
+section#enquadramento > figure > a {
+    width: 150px;
+    padding: 4px 4px 0 4px;
+    border: 1px black solid;
+    margin: 0 5px;
+    cursor: zoom-in;
+}
+
+section#enquadramento > figure > a > img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+aside#video {
+    display: flex;
+    justify-content: center;
+}
+
+aside#video > iframe {
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+
+
+article#poema-multi > h3 {
+    margin-bottom: -15px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+article#poema-multi aside {
+    max-width: 450px;
+    padding: 30px 10px 10px 10px;
+    margin: auto;
+    background-color: var(--cor-branco-fantasma);
+}
+
+article#poema-multi aside p {
+    background-color: transparent;
+}
+
+
+
+.elegante {
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-family: var(--fonte-titulos);
+    text-align: left;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                               Ficheiro local.html                                 */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+section#sec-local {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+section#sec-local > p {
+    max-width: 250px;
+}
+
+section#sec-local > iframe {
+    display: block;
+    width: 1000px;
+    height: 400px;
+    border: 2px black solid;
+    margin-left: 20px;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                               Ficheiro info.html                                  */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    padding: 5px;
+    border: 1px solid var(--cor-preto-com-carbono);
+    border-collapse: collapse;
+}
+
+th {
+    color: white;
+    background-color: var(--cor-preto-com-carbono);
+}
+
+tr:nth-child(2n) {
+    background-color: lightgrey;
+}
+
+tr:hover {
+    color: white;
+    background-color: lightslategray;
+}
+
+
+
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                          Ficheiro pontosdeinteresse.html                          */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+.maiusculo {
+    text-transform: uppercase;
+}
+
+.decorar-linha li:nth-child(2n) {
+    color: var(--cor-azul-clara);
+}
+
+.decorar-ul {
+    font-size: 2em;
+    list-style-type: circle;
+}
+
+.decorar-ol {
+    font-size: 2em;
+    list-style-type: upper-roman;
+}
