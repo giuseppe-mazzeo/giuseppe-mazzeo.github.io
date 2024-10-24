@@ -17,7 +17,7 @@
 body {
     display: grid;
     grid-template-columns: 200px 3fr;
-    grid-template-rows: 10vh 200px 40% 7vh;
+    grid-template-rows: 10vh 200px 42% 7vh;
     grid-template-areas: 'header-area header-area'
                         'main-area main-area'
                         'article-primeiro-area article-segundo-area'
@@ -86,12 +86,13 @@ main {
 #segundo div {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 30px;
+    gap: 10px;
+    margin-left: 30px;
 }
 
 #segundo a {
     display: block;
-    padding: 15px;
+    padding: 17px;
     border-radius: 10px;
     margin: 5px;
     text-decoration: none;
@@ -128,7 +129,7 @@ footer {
 @media screen and (max-width: 550px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 10vh 200px 200px 25% 7vh;
+        grid-template-rows: 10vh 200px 200px 27% 7vh;
         grid-template-areas: 'header-area'
                             'main-area'
                             'article-primeiro-area' 
