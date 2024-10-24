@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+:root {
+    --cor-fundo: rgba(128, 128, 128, 0.195);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    grid-template-rows: 10vh 200px 40% 7vh;
+    grid-template-areas: 'header-area header-area'
+                        'main-area main-area'
+                        'article-primeiro-area article-segundo-area'
+                        'footer-area footer-area';
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: rgba(211, 211, 211, 0.19);
+}
+
+
+
+header {
+    grid-area: header-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--cor-fundo);
+}
+
+
+
+main {
+    grid-area: main-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+
+#primeiro {
+    grid-area: article-primeiro-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    list-style: inside;
+    background-color: white;
+}
+
+#primeiro ul {
+    margin-left: 20px;
+}
+
+
+
+#segundo {
+    grid-area: article-segundo-area;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#segundo div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+
+#segundo a {
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+#segundo a:nth-child(2n) {
+    background-color: rgba(169, 169, 169, 0.744);
+}
+
+#segundo a:nth-child(2n + 1) {
+    background-color: rgb(98, 97, 97);
+}
+
+#segundo a:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-fundo);
+}
+
+
+
+@media screen and (max-width: 550px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 200px 200px 25% 7vh;
+        grid-template-areas: 'header-area'
+                            'main-area'
+                            'article-primeiro-area' 
+                            'article-segundo-area'
+                            'footer-area';
+    }
+}
