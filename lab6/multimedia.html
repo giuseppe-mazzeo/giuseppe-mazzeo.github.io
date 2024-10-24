@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/media-query.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Multimédias</title>
 </head>
 <body>
     <header>
         <h1>Quioto</h1>
-
-        <nav id="menu">
-            <a class="destaque-atual" href="index.html">Home</a>
-            <a href="local.html">Localização</a>
-            <a class="destaque-atual" href="multimedia.html">Multimédia</a>
-            <a href="info.html">Informação</a>
-            <a class="destaque-introducao" href="../index.html">Introdução</a>
-        </nav>
-        </nav>
     </header>
-
-    <nav id="menu-multi">
-        <a href="#fts"><span class="material-symbols-outlined">photo_library</span></a>
-        <a href="#vd"><span class="material-symbols-outlined">subscriptions</span></a>
-        <a href="#pm"><span class="material-symbols-outlined">edit_note</span></a>
+    
+    <nav id="menu">
+        <a href="index.html">Home</a>
+        <a href="local.html">Localização</a>
+        <a class="destaque-atual" href="multimedia.html">Multimédia</a>
+        <a href="info.html">Informação</a>
+        <a class="destaque-introducao" href="../index.html">Introdução</a>
     </nav>
-
+    
     <main>
+        <nav id="menu-multi">
+            <a href="#fts"><span class="material-symbols-outlined">photo_library</span></a>
+            <a href="#vd"><span class="material-symbols-outlined">subscriptions</span></a>
+            <a href="#pm"><span class="material-symbols-outlined">edit_note</span></a>
+        </nav>
+        
         <article>
             <h2 id="fts" class="elegante">Fotografias</h2>
             
+            <p>
+                Mergulhe nos cenários deslumbrantes de Quioto, uma cidade rica em história e beleza natural. Abaixo, você pode ver uma imagem destacada de **Higashiyama**, um dos bairros mais antigos da cidade. Além disso, oferecemos mais três fotos incríveis de pontos icônicos, e você pode explorar cada uma delas clicando nos links correspondentes.
+            </p>
+
+            <p>
+                Cada clique vai substituir a imagem atual, permitindo que você tenha uma visão mais detalhada de cada um desses lugares encantadores.
+            </p>
+
             <section  id="enquadramento">
                 <iframe name="exibir-foto" src="images/higashiyama-medio.webp" frameborder="0" width="920px" height="700px"></iframe>
     
@@ -102,6 +109,25 @@
             </aside>
         </article>
     </main>
+    
+    <aside class="extra">
+        <img src="images/bandeiras.avif" alt="Mulher sorrindo segurando e olhando para o smartphone.">
+        
+        <section>
+            <h3>Visitando outros horizontes</h3>
+    
+            <!-- 
+                <p>
+                    Além de Quioto, há lugares incríveis para visitar.
+                </p>
+            -->
+            <p>
+                Dê uma olhada em algumas capitais do mundo fascinantes.
+            </p>
+    
+            <a href="#quizz">Ver mais...</a>
+        </section>
+    </aside>
 
     <footer>
         <div>

@@ -4,7 +4,7 @@
 
 @charset "UTF-8";
 
-
+@import url('style.css');
 
 :root {
     --cor-bege-claro: #F2F0D8;
@@ -29,8 +29,31 @@
 
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 17% 1fr 17%;
+    grid-template-rows: 100px 80vh 1fr 1fr 1fr 1fr 70px;
+    grid-template-areas: 'header-area header-area header-area'
+                         '. main-area .'
+                         'article-poema-area article-poema-area article-poema-area'
+                         '. article-paisagem-area .'
+                         'article-cidades-area article-cidades-area article-cidades-area'
+                         'article-paralax-area article-paralax-area article-paralax-area'
+                         'footer-area footer-area footer-area';
+    grid-gap: 10px;
+    background-color: var(--cor-rosa-claro-acinzentado);
+}
+
+
 
 header {
+    grid-area: header-area;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,10 +66,8 @@ header {
 
 header a {
     padding: 20px;
-
     text-decoration: none;
-
-    color: black;
+    color: white;
 }
 
 header > a:last-child {
@@ -68,19 +89,33 @@ header a:active {
 
 
 main {
+    grid-area: main-area;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 90vh;
+    height: 80vh;
     padding-top: 20px;
+}
 
+h2 {
+    font-size: 2.6em;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    text-align: center;
+}
 
-    background-image: url('../images/capitais/bandeiras.avif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
+p {
+    padding: 3px 6px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-indent: 20px;
+    text-align: justify;
+    letter-spacing: 1.2px;
+    word-spacing: 3px;
+    line-height: 1.2;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.864);
 }
 
 
@@ -91,7 +126,7 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    max-width: 100%;
     height: 50vh;
 }
 
@@ -102,9 +137,14 @@ article:last-child {
 
 
 article#poema {
+    grid-area: article-poema-area;
     font-weight: bold;
-
     background-color: green;
+}
+
+article#poema > p {
+    color: white;
+    background-color: transparent;
 }
 
 article#poema p:last-child {
@@ -117,7 +157,9 @@ article#poema p:last-child {
 
 
 article#paisagem {
+    grid-area: article-paisagem-area;
     position: relative;
+    z-index: -1;
 }
 
 article#paisagem > img {
@@ -134,25 +176,23 @@ article#paisagem > a {
 
 
 article#cidades {
+    grid-area: article-cidades-area;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
     gap: 15px;
+    background-color: gainsboro;
 }
 
 article#cidades > div {
     display: flex;
     align-items: center;
-
-    width: calc(33% - 15px); /* 3 divs por linha com espaçamento */
-    max-width: 200px;
-
+    width: 250px;
     overflow: hidden;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
-
     background-color: gray;
 }
 
@@ -165,4 +205,39 @@ article#cidades p {
     display: flex;
     justify-content: center;
     width: 50%;
+    color: white;
+    background-color: transparent;
+}
+
+
+
+article#paralax {
+    grid-area: article-paralax-area;
+    height: 70vh;
+    background-image: url("../images/capitais/cachorro-feliz.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-top: 2px solid var(--cor-branco-fantasma);
+    font-style: italic;
+}
+
+footer img {
+    width: 160px;
+    height: auto;
+}
+
+footer a {
+    color: gray;
 }
