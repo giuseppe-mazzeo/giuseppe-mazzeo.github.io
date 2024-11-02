@@ -102,3 +102,7 @@ article#tirar-fotos img {
 td:first-child, td:nth-child(2) {
     text-align: center;
 }
+
+.melhor-mes {
+    background-color: #f24b4b32;
+}
