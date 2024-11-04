@@ -1,0 +1,37 @@
+@import url('style.css');
+
+
+
+.extra {
+    height: 360px;
+}
+
+.extra img {
+    margin-bottom: -16%;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+th {
+    font-size: 1.5em;
+    color: white;
+    background-color: #010326;
+}
+
+td:first-child {
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #F2F0D8;
+}

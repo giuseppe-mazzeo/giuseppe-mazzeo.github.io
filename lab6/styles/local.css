@@ -1,0 +1,35 @@
+@import url('style.css');
+
+
+
+section#sec-local {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+section#sec-local > p {
+    max-width: 250px;
+}
+
+section#sec-local > div {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+section#sec-local iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 96%;
+    height: 100%;
+    border: 2px black solid;
+    margin-left: 20px;
+}
