@@ -1,30 +1,70 @@
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
     body {
         display: grid;
-        grid-template-columns: 4% 1fr 4%;
-        grid-template-rows: 80px 270px 1fr 250px 70px;
+        grid-template-columns: 0% 1fr 0%;
+        grid-template-rows: 100px 80px 1fr 70px;
         grid-template-areas: 'header-area header-area header-area'
                              'nav-area nav-area nav-area'
                              '. main-area .'
-                             '. aside-area .'
                              'footer-area footer-area footer-area';
         grid-gap: 10px;
         background-color: var(--cor-rosa-claro-acinzentado);
     }
+    
+    
 
     nav#menu {
-        flex-direction: column;
-        width: 75%;
+        flex-direction: row;
+        row-gap: 6px;
+        margin: 0;
         height: 100%;
-        margin: auto;
     }
 
-    section#sec-local {
+    .botao-top {
         flex-direction: column;
     }
 
-    section#sec-local > p {
-        max-width: 100%;
+    nav#menu > a:hover .botao-top {
+        
+    }
+
+    nav#menu > a.destaque-introducao:hover  {
+        animation: none;
+    }
+
+    .extra {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1030px) {
+    nav#menu {
+        column-gap: 60px;
+    }
+
+    nav#menu .material-symbols-outlined {
+        font-size: 1.6em;
+    }
+
+    nav#menu > a span .material-symbols-outlined ~ span {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 780px) {
+    nav#menu {
+        column-gap: 10px;
+    }
+
+
+
+    .fundo-quioto-texto {
+        height: 70%;
     }
 }
 

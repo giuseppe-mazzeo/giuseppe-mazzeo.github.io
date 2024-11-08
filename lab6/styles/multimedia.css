@@ -1,9 +1,11 @@
 @import url('style.css');
+@import url('responsive.css');
 
 
-
-.extra {
-    height: 360px;
+main {
+    grid-template-areas: '.';
+    row-gap: 80px;
+    margin-top: 20px;
 }
 
 
@@ -11,11 +13,12 @@
 nav#menu-multi {
     display: flex;
     justify-content: space-evenly;
-    max-width: 500px;
+    width: 700px;
     padding: 7px 0;
     border-radius: 50px;
     margin: 20px auto;
     background-color: #F2F0D8;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.159);
 }
 
 nav#menu-multi a {
@@ -38,46 +41,50 @@ nav#menu-multi span {
 }
 
 
-section#enquadramento {
+.enquadramento {
     margin-top: 20px;
 }
 
-section#enquadramento > iframe {
-    display: block;
-    max-width: 610px;
-    max-height: 410px;
-    padding: 3px;
-    border: 2px solid black;
+.enquadramento > div {
+    width: 604.8px;
+    height: 405px;
+    border: 3px #F24B4B solid;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-section#enquadramento > figure {
+.enquadramento iframe {
+    position: absolute;
+    z-index: -1;
+    transform: 2s ease;
+    margin-top: 10px;
+    margin-left: 11.5px;
+}
+
+.enquadramento > figure {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-section#enquadramento > figure > a {
-    width: 150px;
-    padding: 4px 4px 0 4px;
-    border: 1px black solid;
-    margin: 0 5px;
+.enquadramento > figure a {
     cursor: zoom-in;
+    display: flex;
+    border: 3px solid #F24B4B;
 }
 
-section#enquadramento > figure > a > img {
+.enquadramento > figure a > img {
+    width: 170px;
     height: auto;
-    width: 100%;
 }
 
 
 
-aside#video {
+#video aside {
     display: flex;
     justify-content: center;
 }
 
-aside#video > iframe {
+#video aside > iframe {
     max-width: 700px;
     height: auto;
     aspect-ratio: 16/9;
@@ -85,21 +92,21 @@ aside#video > iframe {
 
 
 
-article#poema-multi > h3 {
+#poema > h3 {
     margin-bottom: -12px;
     font-size: 1.7em;
     text-align: center;
     color: #F24B4B;
 }
 
-article#poema-multi aside {
+#poema aside {
     max-width: 450px;
     padding: 20px 10px 10px 10px;
     margin: auto;
     background-color: #01032638;
 }
 
-article#poema-multi aside p {
+#poema aside p {
     text-indent: 0;
     background-color: transparent;
 }

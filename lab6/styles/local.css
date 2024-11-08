@@ -1,19 +1,25 @@
 @import url('style.css');
+@import url('responsive.css');
 
 
 
-section#sec-local {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+main {
+    grid-template-areas: '.';
+    row-gap: 120px;
     margin-top: 20px;
 }
 
-section#sec-local > p {
+main section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main section > p {
     max-width: 250px;
 }
 
-section#sec-local > div {
+main section > div {
     position: relative;
     z-index: -1;
     width: 100%;
@@ -22,7 +28,7 @@ section#sec-local > div {
     padding-top: 56.25%;
 }
 
-section#sec-local iframe {
+main section iframe {
     position: absolute;
     top: 0;
     right: 0;
@@ -31,5 +37,20 @@ section#sec-local iframe {
     width: 96%;
     height: 100%;
     border: 2px black solid;
-    margin-left: 20px;
+    margin: 0 auto;
+}
+
+ 
+
+
+
+@media screen and (max-width: 1500px) {
+    main section {
+        flex-direction: column;
+    }
+
+    main section > p {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
