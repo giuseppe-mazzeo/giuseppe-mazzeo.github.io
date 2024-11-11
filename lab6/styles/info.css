@@ -1,13 +1,27 @@
 @import url('style.css');
+@import url('responsive.css');
+
+
+
+body {
+    grid-template-areas: 'header-area header-area header-area'
+                         'nav-area nav-area nav-area'
+                         'aside-area main-area aside-informacao-area'
+                         'footer-area footer-area footer-area';
+}
+
+
+
+main {
+    grid-template-areas: '.';
+    row-gap: 100px;
+    margin-top: 20px;
+}
 
 
 
 .extra {
-    height: 360px;
-}
-
-.extra img {
-    margin-bottom: -16%;
+    height: 380px;
 }
 
 
@@ -28,10 +42,137 @@ th {
     background-color: #010326;
 }
 
-td:first-child {
+td:nth-child(2n + 1) {
     font-weight: 600;
 }
 
-tr:hover {
+td:nth-child(3) {
+    border-left: 4px solid black;
+}
+
+.tbody-geografia-historia td:hover {
+    text-decoration: underline;
+}
+
+.tbody-geografia tr:hover,
+.tbody-historia tr:hover,
+.tbody-outros-fatores-grande tr:hover,
+.tbody-outros-fatores-pequeno tr:hover,
+.tbody-curiosidades-pequeno tr:hover,
+.tbody-curiosidades-grande tr:hover,
+.tbody-curiosidades-pequeno tr:hover
+{
     background-color: #F2F0D8;
+}
+
+
+/* tbody:hover th {
+    color: #F24B4B;
+} */
+
+
+
+.tbody-geografia-historia th {
+    width: 50%;
+}
+.tbody-geografia,
+.tbody-historia,
+.tbody-outros-fatores-grande,
+.tbody-outros-fatores-pequeno,
+.tbody-curiosidades-pequeno {
+    display: none;
+}
+
+
+
+.caixa-informacao {
+    grid-area: aside-informacao-area;
+    position: sticky;
+    top: 250px;
+    right: 15px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.caixa-informacao tr {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.caixa-informacao td:first-child {
+    border: none;
+}
+
+.caixa-informacao td:hover {
+    transform: translateX(5px);
+}
+
+.caixa-informacao td:last-child {
+    padding-left: 10px;
+}
+
+.caixa-informacao td:last-child::before {
+    content: '- ';
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .tbody-geografia-historia,
+    .tbody-curiosidades-grande {
+        display: none;
+    }
+    .tbody-geografia,
+    .tbody-historia,
+    .tbody-curiosidades-pequeno {
+        display: table-row-group;
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    body {
+        grid-template-rows: 100px 80px 1fr 70px;
+        grid-template-areas: 'header-area header-area header-area'
+                             'nav-area nav-area nav-area'
+                             '. main-area .'
+                             'footer-area footer-area footer-area';
+    }
+
+
+
+    .caixa-informacao {
+        display: none;
+    }
+
+
+
+    .tbody-geografia,
+    .tbody-historia,
+    .tbody-curiosidades-pequeno {
+        display: none;
+    }
+    .tbody-geografia-historia,
+    .tbody-outros-fatores-grande,
+    .tbody-curiosidades-grande {
+        display: table-row-group;
+    }
+}
+
+
+
+@media screen and (max-width: 1030px) {
+    .tbody-geografia,
+    .tbody-historia,
+    .tbody-curiosidades-pequeno,
+    .tbody-outros-fatores-pequeno {
+        display: table-row-group;
+    }
+    .tbody-geografia-historia,
+    .tbody-outros-fatores-grande,
+    .tbody-curiosidades-grande {
+        display: none;
+    }
 }

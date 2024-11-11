@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/info.css">
-    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Informações</title>
 </head>
@@ -21,32 +20,87 @@
             <div>
                 <span class="material-symbols-outlined">spa</span>
                 <span class="material-symbols-outlined">spa</span>
-                <span class="material-symbols-outlined">spa</span>
+                <span class="material-symbols-outlined">spa</s+pan>
             </div>
         </section>
     </header>
     
     <nav id="menu">
-        <a href="index.html">Home</a>
-        <a href="local.html">Localização</a>
-        <a href="multimedia.html">Multimédia</a>
-        <a class="destaque-atual" href="info.html">Informação</a>
-        <a href="video.html">Explore mais</a>
-        <a class="destaque-introducao" href="../index.html">Introdução</a>
+        <a href="index.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined">home</span>
+                <span>Home</span>
+            </span>
+        </a>
+        <a href="local.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined">location_on</span>
+                <span>Localização</span>
+            </span>
+        </a>
+        <a href="multimedia.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined">mms</span>
+                <span>Multimédia</span>
+            </span>
+        </a>
+        <a href="info.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined destaque-symbols">import_contacts</span>
+                <span class="destaque-atual">Informação</span>
+            </span>
+        </a>
+
+        <a href="video.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined">travel_explore</span>
+                <span>Explore mais</span>
+            </span>
+        </a>
+        <a class="destaque-introducao" href="../index.html">
+            <span class="botao-top">
+                <span class="material-symbols-outlined">keyboard_backspace</span>
+                <span>Introdução</span>
+            </span>
+        </a>
     </nav>
 
     <aside class="extra">
         <div>
             <h3>Pontos de Interesse</h3>
-            
+            <div class="linha"></div>
             <p>
-                Confira algumas informação úteis para viajar em Quioto.
+                Confira algumas outras informação úteis para viajar em Quioto.
             </p>
-            
+            <div class="linha"></div>
             <a href="index.html#pontos-interesse">Ver mais...</a>
         </div>
 
         <img src="images/info/undraw_best_place_re_lne9.svg" alt="Desenho de algumas casas e um prédio. Logo acima dessas contruções tem uma sinalização de localização.">
+    </aside>
+
+    <aside class="caixa-informacao">
+        <section>
+            <table>
+                <tbody>
+                    <tr>
+                        <th colspan="2">Outros Fatores</th>
+                    </tr>
+                    <tr>
+                        <td>Idioma Oficial</td>
+                        <td>Japonês</td>
+                    </tr>
+                    <tr>
+                        <td>Moeda</td>
+                        <td>Iene (¥)</td>
+                    </tr>
+                    <tr>
+                        <td>Fuso Horário</td>
+                        <td>UTC +9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </aside>
 
     <main>
@@ -69,7 +123,42 @@
 
         <article>
             <table>
-                <tbody>
+                <tbody class="tbody-geografia-historia">
+                    <tr>
+                        <th colspan="2">Geografia</th>
+                        <th colspan="2">História</th>
+                    </tr>
+                    <tr>
+                        <td>Localização</td>
+                        <td>Região de Kansai, Província de Quioto, Japão</td>
+                        <td rowspan="3">Fundação</td>
+                        <td rowspan="3">Fundada em 794 d.C. como capital do Japão (Heian-kyō)</td>
+                    </tr>
+                    <tr>
+                        <td>Área Total</td>
+                        <td>~ 827,9 km²</td>
+                    </tr>
+                    <tr>
+                        <td>População</td>
+                        <td>~ 1,45 milhão de hab (estimativa 2024)</td>
+                    </tr>
+                    <tr>
+                        <td>Densidade Demográfica</td>
+                        <td>1.752 hab por km²</td>
+                        <td rowspan="3">Templo Kiyomizu-dera</td>
+                        <td rowspan="3">Foi registrado como Patrimônio Mundial da UNESCO em 17 de dezembro de 1994 como parte dos "Monumentos Históricos da Antiga Quioto"</td>
+                    </tr>
+                    <tr>
+                        <td>Montanhas</td>
+                        <td>Cercada por montanhas (Kitayama, Higashiyama e Nishiyama)</td>
+                    </tr>
+                    <tr>
+                        <td>Rios Principais</td>
+                        <td>Rio Kamo e Rio Katsura</td>
+                    </tr>
+                </tbody>
+
+                <tbody class="tbody-geografia">
                     <tr>
                         <th colspan="2">Geografia</th>
                     </tr>
@@ -97,6 +186,9 @@
                         <td>Rios Principais</td>
                         <td>Rio Kamo e Rio Katsura</td>
                     </tr>
+                </tbody>
+
+                <tbody class="tbody-historia">
                     <tr>
                         <th colspan="2">História</th>
                     </tr>
@@ -108,6 +200,27 @@
                         <td>Templo Kiyomizu-dera</td>
                         <td>Foi registrado como Patrimônio Mundial da UNESCO em 17 de dezembro de 1994 como parte dos "Monumentos Históricos da Antiga Quioto"</td>
                     </tr>
+                </tbody>
+
+                <tbody class="tbody-outros-fatores-grande">
+                    <tr>
+                        <th colspan="4">Outros Fatores</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Idioma Oficial</td>
+                        <td colspan="2">Japonês</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Moeda</td>
+                        <td colspan="2">Iene (¥)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Fuso Horário</td>
+                        <td colspan="2">UTC +9</td>
+                    </tr>
+                </tbody>
+
+                <tbody class="tbody-outros-fatores-pequeno">
                     <tr>
                         <th colspan="2">Outros Fatores</th>
                     </tr>
@@ -123,6 +236,58 @@
                         <td>Fuso Horário</td>
                         <td>UTC +9</td>
                     </tr>
+                </tbody>
+
+                <tbody class="tbody-curiosidades-grande">
+                    <tr>
+                        <th colspan="4">Curiosidades</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" colspan="2">Templos e santuários</td>
+                        <td colspan="2">Mais de 2.000 templos</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="font-weight: normal;">Mais de 2.000 santuários (destacando Kinkaku-ji e Fushimi Inari)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Patrimônio Mundial</td>
+                        <td colspan="2">17 locais reconhecidos pela UNESCO</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Clima</td>
+                        <td colspan="2">Clima temperado, com verões quentes e invernos frios</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Estação de Trem Principal</td>
+                        <td colspan="2">Estação de Quioto (um dos maiores centros de transporte do Japão)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Principais Festivais</td>
+                        <td colspan="2">Gion Matsuri (julho), Aoi Matsuri (maio), Jidai Matsuri (outubro)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Curiosidade Histórica</td>
+                        <td colspan="2">Quioto foi poupada de bombardeios durante a Segunda Guerra Mundial</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Símbolo de Quioto</td>
+                        <td colspan="2">Flor de cerejeira (sakura)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Esportes Populares</td>
+                        <td colspan="2">Beisebol e futebol</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Famoso por</td>
+                        <td colspan="2">Artes tradicionais como o chá cerimonial, ikebana (arranjos florais) e quimonos</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Universidade Famosa</td>
+                        <td colspan="2">Universidade de Quioto (uma das mais prestigiadas do Japão)</td>
+                    </tr>
+                </tbody>
+
+                <tbody class="tbody-curiosidades-pequeno">
                     <tr>
                         <th colspan="2">Curiosidades</th>
                     </tr>
@@ -131,7 +296,7 @@
                         <td>Mais de 2.000 templos</td>
                     </tr>
                     <tr>
-                        <td>Mais de 2.000 santuários (destacando Kinkaku-ji e Fushimi Inari)</td>
+                        <td style="font-weight: normal;">Mais de 2.000 santuários (destacando Kinkaku-ji e Fushimi Inari)</td>
                     </tr>
                     <tr>
                         <td>Patrimônio Mundial</td>

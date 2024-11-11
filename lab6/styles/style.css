@@ -213,6 +213,10 @@ nav#menu > a.destaque-introducao span {
     background-color: #010326;
 }
 
+nav#menu > a.destaque-introducao .material-symbols-outlined {
+    display: none;
+}
+
 nav#menu > a.destaque-introducao:hover  {
     border-color: #010326;
     color: #010326;
@@ -514,17 +518,4 @@ footer img {
 
 footer a {
     color: gray;
-}
-
-
-/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
-/*                          Ficheiro video.html                          */
-/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
-
-#video-site {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
 }

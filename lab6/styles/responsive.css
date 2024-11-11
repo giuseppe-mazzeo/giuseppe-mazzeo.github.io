@@ -24,13 +24,7 @@
         flex-direction: column;
     }
 
-    nav#menu > a:hover .botao-top {
-        
-    }
-
-    nav#menu > a.destaque-introducao:hover  {
-        animation: none;
-    }
+    
 
     .extra {
         display: none;
@@ -52,6 +46,10 @@
     nav#menu > a span .material-symbols-outlined ~ span {
         display: none;
     }
+
+    nav#menu > a.destaque-introducao span span:last-child {
+        display: block;
+    }
 }
 
 
@@ -70,23 +68,12 @@
 
 
 
-
-
-@media screen and (min-width: 892px) {
-    section#enquadramento {
-        display: flex;
-        justify-content: space-evenly;
-        max-width: 800px;
-        margin: auto;
-    }
-    
-    section#enquadramento > figure {
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-bottom: 40px;
+@media screen and (max-width: 600px) {
+    nav#menu > a.destaque-introducao .material-symbols-outlined {
+        display: block;
     }
 
-    section#enquadramento > figure a {
-        margin: 0 0 10px 0;
+    nav#menu > a.destaque-introducao span span:last-child {
+        display: none;
     }
 }
