@@ -24,6 +24,11 @@
                 <span class="material-symbols-outlined">spa</span>
             </div>
         </section>
+
+        <div id="placar">
+            <span>Perguntas respondidas:</span>
+            <span>0</span>
+        </div>
     </header>
 
     <main>
@@ -40,15 +45,18 @@
                 <div class="form-cadastro">
                     <div>
                         <label for="nome">Primeiro nome</label>
-                        <input type="text" name="nome" id="nome" placeholder="Digite seu primeiro nome" maxlength="15" autocomplete="on" autofocus required aria-describedby="Escrever seu nome">
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu primeiro nome" minlength="5" maxlength="15" autocomplete="on" autofocus required aria-describedby="Escrever seu nome">
+                        <span class="material-symbols-outlined">cancel</span>
                     </div>
                     <div>
                         <label for="apelido">Apelido</label>
-                        <input type="text" name="apelido" id="apelido" placeholder="Digites seu apelido" maxlength="15" autocomplete="on" required aria-describedby="Escrever seu apelido">
+                        <input type="text" name="apelido" id="apelido" placeholder="Digites seu apelido" minlength="5" maxlength="15" autocomplete="on" required aria-describedby="Escrever seu apelido">
+                        <span class="material-symbols-outlined">cancel</span>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" maxlength="25" placeholder="Digite seu email" autocomplete="on" required aria-describedby="Escrever seu email">
+                        <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="on" required aria-describedby="Escrever seu email">
+                        <span class="material-symbols-outlined">cancel</span>
                     </div>
                 </div>
             </fieldset>
@@ -132,13 +140,14 @@
                     <div class="perguntas-4-6-conteudo">
                         <section>
                             <!-- 794 -->
-                                <h3>4</h3>
-                                <p>Quando Quioto foi fundada como capital imperial do Japão?</p>
+                            <h3>4</h3>
+                            <p>Quando Quioto foi fundada como capital imperial do Japão?</p>
 
-                                <div class="pergunta4">
+                            <div class="pergunta4">
+                                <span>Apenas os números entre 0 e 1000 são válidos</span>
                                 <input type="number" name="p4" id="p4" min="1" max="1000" step="1" placeholder="[0, 1000]">
                                 <label for="p4"> d.C.</label>
-                                </div>
+                            </div>
                         </section>
 
                         <section>
@@ -148,7 +157,7 @@
                             <p>Se você fosse a um festival noturno em Quioto, que horas começaria?</p>
 
                             <div class="pergunta5">
-                                <input type="time" name="p5">
+                                <input type="time" name="p5" id="p5">
                             </div>
                         </section>
 
@@ -159,7 +168,8 @@
                             <p>Qual cor mais representa o outono em Quioto, quando as folhas mudam de cor?</p>
 
                             <div class="pergunta6">
-                                <input type="color" name="p6" value="#ffffff">
+                                <span>Escolha uma cor diferente de branco</span>
+                                <input type="color" name="p6" id="p6" value="#ffffff">
                             </div>
                         </section>
                     </div>
@@ -178,7 +188,8 @@
                             <p>Quantos templos e santuários existem em Quioto?</p>
 
                             <div class="pergunta7">
-                                <input type="number" name="p7" min="1" max="3000" step="1" placeholder="[0, 3000]">
+                                <span>Apenas os números entre 0 e 3000 são válidos</span>
+                                <input type="number" name="p7" id="p7" min="1" max="3000" step="1" placeholder="[0, 3000]">
                             </div>
                         </section>
 
@@ -188,8 +199,8 @@
                             <p>Em uma escala de 1 a 10, o quanto você gostaria de visitar Quioto?</p>
 
                             <div class="pergunta8">
-                                <input type="range" name="p8" min="1" max="10" value="1" oninput="document.getElementById('rangeValue').textContent=this.value" aria-label="Escala de visita a Quioto. 1 siginifica que não teria interesse em visitar Quioto. 10 seria um grande interesse da sua parte em visitá-la">
-                                <span id="rangeValue">1</span>
+                                <input type="range" name="p8" id="p8" min="1" max="10" value="1" aria-label="Escala de visita a Quioto. 1 siginifica que não teria interesse em visitar Quioto. 10 seria um grande interesse da sua parte em visitá-la">
+                                <span>0</span>
                             </div>
                         </section>
 
@@ -200,7 +211,7 @@
                             <p>Em que data o Templo Kiyomizu-dera foi registrado como Patrimônio Mundial da UNESCO?</p>
 
                             <div class="pergunta9">
-                                <input type="date" name="p9" aria-describedby="Em ordem da esquerda para a direita, dia, mês e ano.">
+                                <input type="date" name="p9" id="p9" aria-describedby="Em ordem da esquerda para a direita, dia, mês e ano.">
                             </div>
                         </section>
                     </div>
@@ -236,7 +247,12 @@
         </form>
         
         <article class="botoes">
-            <button class="enviar" type="submit" form="quizz-form">Enviar</button>
+            <button class="enviar" type="submit" form="quizz-form">
+                <div>
+                    <span class="material-symbols-outlined">lock</span>
+                </div>
+                Enviar
+            </button>
             <button class="reiniciar" type="reset" form="quizz-form">Reiniciar</button>
         </article>
     </main>
@@ -250,4 +266,7 @@
             Acesse o meu <a href="https://github.com/giuseppe-mazzeo/" target="_blank" rel="external">GitHub</a>
         </p>
     </footer>
+
+    <script src="scripts/quizz.js"></script>
 </body>
+</html>

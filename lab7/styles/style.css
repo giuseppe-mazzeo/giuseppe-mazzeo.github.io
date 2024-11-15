@@ -115,36 +115,38 @@ header section {
     align-items: baseline;
 }
 
-header div {
+header section div {
     display: flex;
     align-items: flex-end;
 }
 
-header div span {
+header section div span {
     color: #F2F0D8;
 }
 
-header div:first-child {
+header section div:first-child {
     margin-right: 7px;
 }
 
-header div:first-child > span {
+header section div:first-child > span {
     transform: rotate(-20deg);
 }
 
-header div:last-child {
+header section div:last-child {
     margin-left: 7px;
 }
 
-header div:last-child > span {
+header section div:last-child > span {
     transform: rotate(20deg);
 }
 
-header div:first-child span:last-child, header div:last-child span:first-child {
+header section div:first-child span:last-child,
+header section div:last-child span:first-child {
     font-size: 2em;
 }
 
-header div:first-child span:first-child, header div:last-child span:last-child {
+header section div:first-child span:first-child,
+header section div:last-child span:last-child {
     font-size: 1.1em;
 }
 
