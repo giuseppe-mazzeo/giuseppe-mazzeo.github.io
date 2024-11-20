@@ -6,12 +6,11 @@
     <link rel="stylesheet" href="styles/quizz.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Quizz sobre Quioto</title>
-    <script src="scripts/quizz.js"></script>
 </head>
 <body>
     <header>
         <a href="home.html"><span class="material-symbols-outlined">home</span> Voltar</a>
-
+        
         <section>
             <div>
                 <span class="material-symbols-outlined">spa</span>
@@ -25,16 +24,16 @@
                 <span class="material-symbols-outlined">spa</span>
             </div>
         </section>
-
+        
         <div id="placar">
             <span>Perguntas respondidas:</span>
             <span>0</span>
         </div>
     </header>
-
+    
     <main>
         <h2>Quizz sobre Quioto</h2>
-
+        
         <form id="quizz-form" action="https://postman-echo.com/get" method="get">
             <fieldset class="form-identificacao">
                 <legend>Identificação</legend>
@@ -64,28 +63,28 @@
 
             <fieldset class="form-perguntas">
                 <legend>10 Perguntas sobre Quioto</legend>
-
+                
                 <div class="perguntas-1-3">
                     <div class="perguntas-1-3-imagem">
                         <img src="images/quizz/undraw_thoughts_re_3ysu.svg" alt="Mulher sentada num banco com uma paisagem de montanhas atrás dela juntamente com um por-do-sol.">
                     </div>
-
+                    
                     <div class="perguntas-1-3-conteudo">
                         <section>
                             <!-- Kinkaku-ji -->
                             <h3>1</h3>
                             <p>Qual é o nome do famoso templo dourado em Quioto?</p>
-
+                            
                             <div class="pergunta1">
                                 <input type="text" name="p1" id="p1" placeholder="Digite o nome do templo" size="18" maxlength="15">
                             </div>
                         </section>
-
+                        
                         <section>
                             <!-- Primavera -->
                             <h3>2</h3>
                             <p>Em qual estação do ano as cerejeiras florescem em Quioto?</p>
-
+                            
                             <div class="pergunta2">
                                 <div>
                                     <input type="radio" name="p2" id="primavera" value="Primavera">
@@ -108,7 +107,7 @@
 
                         <section>
                             <!-- Gion Matsuri, Aoi Matsuri, Jidai Matsuri -->
-                                <!-- Tanabata Matsuri não é um festival específico de Quioto, embora seja celebrado em várias partes do Japão. -->
+                            <!-- Tanabata Matsuri não é um festival específico de Quioto, embora seja celebrado em várias partes do Japão. -->
                             <h3>3</h3>
                             <p>Quais desses eventos são festivais tradicionais de Quioto?</p>
                             
@@ -132,7 +131,7 @@
                         </section>
                     </div>
                 </div>
-
+                
                 <div class="perguntas-4-6">
                     <div class="perguntas-4-6-imagem">
                         <img src="images/quizz/undraw_cabin_hkfr.svg" alt="Uma casa de madeira que ao lado tem uma árvore com o dobro de altura daquela. Logo em cima há um sol vermelho com 3 pássaros voando.Tanto a casa como o topo da árvore têm formato de círculos.">
@@ -143,7 +142,7 @@
                             <!-- 794 -->
                             <h3>4</h3>
                             <p>Quando Quioto foi fundada como capital imperial do Japão?</p>
-
+                            
                             <div class="pergunta4">
                                 <span>Apenas os números entre 0 e 1000 são válidos</span>
                                 <input type="number" name="p4" id="p4" min="1" max="1000" step="1" placeholder="[0, 1000]">
@@ -153,10 +152,10 @@
 
                         <section>
                             <!-- 18:00-19:00 -->
-                                <!-- 18:00 ou 19:00, dependendo do festival. Os festivais noturnos geralmente começam no início da noite. -->
+                            <!-- 18:00 ou 19:00, dependendo do festival. Os festivais noturnos geralmente começam no início da noite. -->
                             <h3>5</h3>
                             <p>Se você fosse a um festival noturno em Quioto, que horas começaria?</p>
-
+                            
                             <div class="pergunta5">
                                 <input type="time" name="p5" id="p5">
                             </div>
@@ -164,10 +163,10 @@
 
                         <section class="pergunta6">
                             <!-- Tons de vermelho e laranja #FF4500 -->
-                                <!-- Tons de vermelho e laranja, representados por cores como #FF4500 (laranja avermelhado). Durante o outono, as folhas de ácer (momiji) ficam rubras. -->
+                            <!-- Tons de vermelho e laranja, representados por cores como #FF4500 (laranja avermelhado). Durante o outono, as folhas de ácer (momiji) ficam rubras. -->
                             <h3>6</h3>
                             <p>Qual cor mais representa o outono em Quioto, quando as folhas mudam de cor?</p>
-
+                            
                             <div class="pergunta6">
                                 <span>Escolha uma cor diferente de branco</span>
                                 <input type="color" name="p6" id="p6" value="#ffffff">
@@ -175,30 +174,30 @@
                         </section>
                     </div>
                 </div>
-
+                
                 <div class="perguntas-7-9">
                     <div class="perguntas-7-9-imagem">
                         <img src="images/quizz/undraw_waiting__for_you_ldha.svg" alt="">
                     </div>
-
+                    
                     <div class="perguntas-7-9-conteudo">
                         <section>
                             <!-- ~2000 -->
-                                <!-- Cerca de 2.000 templos e santuários. Quioto é famosa por seu grande número de templos budistas e santuários xintoístas. -->
+                            <!-- Cerca de 2.000 templos e santuários. Quioto é famosa por seu grande número de templos budistas e santuários xintoístas. -->
                             <h3>7</h3>
                             <p>Quantos templos e santuários existem em Quioto?</p>
-
+                            
                             <div class="pergunta7">
                                 <span>Apenas os números entre 0 e 3000 são válidos</span>
                                 <input type="number" name="p7" id="p7" min="1" max="3000" step="1" placeholder="[0, 3000]">
                             </div>
                         </section>
-
+                        
                         <section>
                             <!-- 1-Pouco 10-Muito -->
                             <h3>8</h3>
                             <p>Em uma escala de 1 a 10, o quanto você gostaria de visitar Quioto?</p>
-
+                            
                             <div class="pergunta8">
                                 <input type="range" name="p8" id="p8" min="1" max="10" value="1" aria-label="Escala de visita a Quioto. 1 siginifica que não teria interesse em visitar Quioto. 10 seria um grande interesse da sua parte em visitá-la">
                                 <span>0</span>
@@ -207,10 +206,10 @@
 
                         <section>
                             <!-- 17 de dezembro de 1994 -->
-                                <!-- Essa data é importante, pois o Templo Kiyomizu-dera, um dos mais famosos em Quioto, foi adicionado à lista de Patrimônios Mundiais da UNESCO como parte dos "Monumentos Históricos da Antiga Quioto". -->
+                            <!-- Essa data é importante, pois o Templo Kiyomizu-dera, um dos mais famosos em Quioto, foi adicionado à lista de Patrimônios Mundiais da UNESCO como parte dos "Monumentos Históricos da Antiga Quioto". -->
                             <h3>9</h3>
                             <p>Em que data o Templo Kiyomizu-dera foi registrado como Patrimônio Mundial da UNESCO?</p>
-
+                            
                             <div class="pergunta9">
                                 <input type="date" name="p9" id="p9" aria-describedby="Em ordem da esquerda para a direita, dia, mês e ano.">
                             </div>
@@ -222,7 +221,7 @@
                     <section>
                         <h3>10</h3>
                         <p>Carregue uma imagem do seu lugar favorito de Quioto ou de um ponto turístico que você gostaria de visitar.</p>
-
+                        
                         <div class="pergunta10">
                             <label for="p10"><span class="material-symbols-outlined">upload</span>Escolha um arquivo</label>
                             <input type="file" name="p10" id="p10" accept="image/*" aria-describedby="Escolha um ficheiro de uma imagem de Quioto.">
@@ -230,10 +229,10 @@
                     </section>
                 </div>
             </fieldset>
-
+            
             <fieldset class="form-feedback">
                 <legend>Dê seu feedback</legend>
-
+                
                 <div class="escrever-comentario">
                     <p><label for="comentario">Escreva um comentário!</label></p>
                     <textarea name="feedback-comentario" id="comentario" maxlength="200" rows="4" cols="50" placeholder="Me diga o que achou do quizz e/ou possíveis melhorias..." aria-describedby="Campo de texto para escrever um comentário"></textarea>
@@ -257,7 +256,7 @@
             <button class="reiniciar" type="reset" form="quizz-form">Reiniciar</button>
         </article>
     </main>
-
+    
     <footer>
         <img src="../lab1/images/ulht.png" alt="Logo da Universidade Lusófona">
         <p>
@@ -267,5 +266,7 @@
             Acesse o meu <a href="https://github.com/giuseppe-mazzeo/" target="_blank" rel="external">GitHub</a>
         </p>
     </footer>
+    
+    <script src="scripts/quizz.js"></script>
 </body>
 </html>

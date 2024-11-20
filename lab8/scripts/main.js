@@ -2,15 +2,8 @@
 
 const exercicio1 = document.querySelector('#ex1 > p');
 
-function trocarFraseNova() {
-    exercicio1.innerHTML = '1.Obrigado por passares!';
-}
-function trocarFraseAntiga() {
-    exercicio1.innerHTML = '1.Passa por aqui!';
-}
-
-exercicio1.onmouseover = trocarFraseNova;
-exercicio1.onmouseout = trocarFraseAntiga;
+exercicio1.onmouseover = () => {exercicio1.textContent = '1.Obrigado por passares!';};
+exercicio1.onmouseout = () => {exercicio1.textContent = '1.Passa por aqui!';};
 
 
 // 2
@@ -24,7 +17,9 @@ function trocaCor(event) {
     exercicio2.style.color = corParaTroca;
 }
 
-botoes.forEach(botao => botao.onclick = trocaCor);
+botoes.forEach((botao) => botao.onclick = () => {
+    exercicio2.style.color = botao.dataset.color;
+});
 
 
 // 3
@@ -46,16 +41,30 @@ function mudaCorFundo() {
 exercicio3.onkeydown = mudaCorFundo;
 
 
-// 4 
+// 4 .1
 
-const exercicio4 = document.querySelector('#ex4 > input[type="text"]');
-const botao = document.querySelector('#ex4 > button');
+const exercicio4o1 = document.querySelector('#ex4o1 > input[type="text"]');
+const botao4o1 = document.querySelector('#ex4o1 > button');
 
 function mudarCorBody() {
-    document.body.style.backgroundColor = exercicio4.value;
+    document.body.style.backgroundColor = exercicio4o1.value;
 }
 
-botao.onclick = mudarCorBody;
+botao4o1.onclick = mudarCorBody;
+
+
+// 4 .2
+
+const corAtual = document.querySelector('#ex4o2 > select');
+
+function mudarCorBody4o2(element) {
+    document.body.style.backgroundColor = element.value;
+}
+
+corAtual.addEventListener('change', function() {
+    mudarCorBody4o2(this);
+});
+
 
 
 // 5
@@ -70,3 +79,43 @@ function incrementarCount() {
 }
 
 exercicio5.onclick = incrementarCount;
+
+
+// 6
+
+const nome = document.querySelector('#ex6 input[type="text"]');
+const idade = document.querySelector('#ex6 input[type="number"]');
+const botaoAtualizaNome = document.querySelector('#ex6 button');
+const mostraTexto = document.getElementById('mostra-texto');
+
+document.querySelector('form').onsubmit = (element) => {
+    element.preventDefault();
+}
+
+botaoAtualizaNome.addEventListener('click', () => {
+    if (nome.value !== '' && idade.value !== '' && idade.value > 0) {
+        mostraTexto.textContent = `Olá, o/a ${nome.value} tem ${idade.value}!`;
+    }
+});
+
+
+// 7
+
+const countSpan = document.querySelector('#ex7 span');
+
+if(!localStorage.getItem('count7')) {
+    localStorage.setItem('count7', 0);
+}
+
+function incrementarCount7() {
+    let count7 = localStorage.getItem('count7');
+    count7++;
+    countSpan.textContent = count7;
+    localStorage.setItem('count7', count7);
+}
+
+setInterval(() => {
+    incrementarCount7();
+}, 1000);
+
+countSpan.textContent = localStorage.getItem('count7');

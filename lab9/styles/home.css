@@ -1,0 +1,184 @@
+@import url('style.css');
+@import url('responsive.css');
+
+
+#caixa-javascript {
+    position: absolute;
+    right: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.425);
+    border-radius: 50%;
+    border-top-color: #EFD81C;
+    border-left-color: #EFD81C;
+    transition: border-color 1s;
+}
+
+#caixa-javascript:hover {
+    border-top-color: rgba(255, 255, 255, 0.425);
+    border-left-color: rgba(255, 255, 255, 0.425);
+    border-right-color: #EFD81C;
+    border-bottom-color: #EFD81C;
+
+} 
+
+#caixa-javascript a {
+    display: flex;
+    text-decoration: none;
+    color: #EFD81C;
+}
+
+#caixa-javascript .material-symbols-outlined {
+    font-size: 2.5em;
+}
+
+
+
+main {
+    grid-template-areas: 'article-fundo-quioto'
+                         'article-breve-introducao'
+                         'article-wikipedia'
+                         'article-capitais'
+                         'article-pontos-interesse'
+                         'article-quizz'
+                         'article-viagem';
+    row-gap: 120px;
+}
+
+#breve-introducao {
+    grid-area: article-breve-introducao;
+}
+
+#wikipedia,
+#capitais,
+#pontos-interesse,
+#quizz,
+#viagem
+{
+    border-top: 4px solid black;
+}
+
+#wikipedia > span,
+#capitais > span,
+#pontos-interesse > span,
+#quizz > span,
+#viagem > span 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin: auto;
+    margin-top: -39px;
+    font-size: 3.5em;
+    background: linear-gradient(to bottom right, #F24B4B, #8A1F1F);
+}
+
+#wikipedia {
+    grid-area: article-wikipedia;
+}
+#capitais {
+    grid-area: article-capitais;
+}
+#pontos-interesse {
+    grid-area: article-pontos-interesse;
+}
+#quizz {
+    grid-area: article-quizz;
+}
+#viagem {
+    grid-area: article-viagem;
+} 
+
+
+
+.fundo-quioto {
+    grid-area: article-fundo-quioto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 78vh;
+    padding: 80px 0;
+    /* text-shadow: 3px 3px 5px black;
+       color: white; */
+    background-color: black;
+    background-image: url('../images/index/quioto-fundo.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.fundo-quioto-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50%;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    text-shadow: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.671);
+}
+
+.fundo-quioto-texto p {
+    padding: 13px 0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+
+.botao {
+    cursor: pointer;
+    display: block;
+    border: none;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+}
+
+.botao::after, 
+.botao::before {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #F24B4B;
+    transition: 0.5s;
+}
+
+.botao::before {
+    margin-left: auto;
+}
+
+.botao::after {
+    height: 5px;
+}
+  
+.botao:hover::after,
+.botao:hover::before {
+    width: 100%;
+}
+
+a[href="https://pt.wikipedia.org/wiki/Quioto"] {
+    width: 170px;
+}
+a[href="capitais.html"] {
+    width: 230px;
+}
+a[href="pontosinteresse.html"] {
+    width: 340px;
+}
+a[href="quizz.html"] {
+    width: 250px;
+}
+a[href="viagem.html"] {
+    width: 360px;
+}

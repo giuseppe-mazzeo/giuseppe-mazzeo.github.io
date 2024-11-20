@@ -1,0 +1,368 @@
+@import url('style.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+@font-face {
+    font-family: 'CaligrafiaJaponesa';
+    src: url('../fonts/Genjiro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@keyframes caixa-direita-para-esquerda {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -45px;
+    }
+}
+
+
+
+body {
+    display: block;
+}
+
+
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    gap: 0;
+}
+
+
+
+h1 {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 span {
+    font-family: 'CaligrafiaJaponesa';
+    font-size: 2.8em;
+    text-shadow: 2px 2px 0px white;
+    color: black;
+}
+
+h1 span:first-child {
+    margin-left: 100px;
+}
+
+h1 span:nth-child(3) {
+    margin-left: 120px;
+}
+
+h1 span:last-child {
+    margin-left: 230px;
+}
+
+.kanji {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: .9em;
+    text-shadow: 1px 1px 0px white;
+    letter-spacing: 10px;
+}
+
+
+.conjunto {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    column-gap: 40px;
+    width: 100vw;
+    height: calc(100% - 100px);
+    border: 10px solid black;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 50px;
+    margin: 50px;
+}
+
+.conjunto::before {
+    content: '';
+    position: absolute;
+    left: 54px;
+    width: calc(100% - 105px);
+    height: calc(100% - 106px);
+    border: 2px solid rgba(255, 0, 0, 0.686);
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 47px;
+}
+
+
+
+.caixa-link {
+    
+    text-decoration: none;
+    color: black;
+    transform: scale(.9);
+}
+
+
+
+.folha {
+    width: 250px;
+    height: 360px;
+    border-top-right-radius: 50px;
+    padding: 10px;
+    border: 5px solid transparent;
+    margin-bottom: -20px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.844);
+}
+
+.folha:hover {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.492);
+    border-left-color: black;
+    transition: box-shadow 1s 1s, border-left-color .4s .7s;
+}
+
+.folha:hover::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 335.5px;
+    border: 12px solid black;
+    margin-top: -14.4px;
+    animation: caixa-direita-para-esquerda .6s ease-in forwards;
+    animation-delay: .2s;
+}
+
+
+
+.folha .material-symbols-outlined {
+    font-size: 2em;
+    color: #8A1F1F;
+}
+
+.folha:hover .material-symbols-outlined {
+    font-weight: bold;
+}
+
+.folha h2 {
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #8A1F1F;
+    text-shadow: 1px 1px 0px black;
+}
+
+.folha h2 span:last-child {
+    display: none;
+}
+
+.folha h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #F24B4B;
+}
+
+.folha ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.folha li {
+    margin-bottom: 2px;
+}
+
+.folha li i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.folha > span:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2px 5px 0 5px;
+    border-top: 2px solid black;
+    margin-top: 15px;
+}
+
+.folha:hover > span:last-child {
+    font-weight: bold;
+}
+
+
+
+.kanji-folha, .kanji-pequeno-folha, .kanji-muito-pequeno-folha {
+    position: absolute;
+    z-index: -1;
+    display: none;
+    left: 17px;
+    width: 15px;
+    margin-top: -330px;
+    font-family: "Sawarabi Mincho", serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: red;
+    animation: caixa-direita-para-esquerda .6s ease-in forwards;
+    animation-delay: .2s;
+}
+
+.folha:hover ~ .kanji-folha {
+    display: inline;
+}
+
+
+
+@media screen and (max-width: 985px) {
+    .conjunto {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        row-gap: 20px;
+    }
+
+    .conjunto::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: none;
+        border-right: none;
+        border-bottom: none;
+        border-top-left-radius: 0;
+    }
+
+
+
+    .folha {
+        height: 190px;
+        border-left-color: black;
+        border-radius: 0;
+    }
+
+    .folha h3, .folha ul, .folha span:last-child {
+        display: none;
+    }
+
+    .folha::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 165.5px;
+        border: 12px solid black;
+        margin-top: -14.4px;
+        margin-left: -45px;
+        animation: none;
+    }
+
+    .folha:hover::before {
+        height: 165.5px;
+        animation: none;
+    }
+
+    .folha:hover ~ .kanji-folha {
+        display: none;
+    }
+
+
+
+    .kanji-pequeno-folha {
+        display: inline;
+        margin-top: -160px;
+        margin-left: -45px;
+        animation: none;
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+    h1 {
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
+    .conjunto {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        row-gap: 5px;
+        height: 100vh;
+        border: none;
+        margin: 0;
+    }
+
+
+    
+    .folha {
+        width: 380px;
+        height: 150px;
+        border-left-color: black;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .folha h2 {
+        margin: 0;
+    }
+
+    .folha h2 span:first-child {
+        display: none;
+    }
+
+    .folha h2 span:last-child {
+        display: inline;
+    }
+
+    
+
+    .folha::before {
+        height: 125.5px;
+        margin-top: -14.4px;
+        animation: none;
+    }
+
+    .folha:hover::before {
+        height: 125.5px;
+    }
+
+
+
+
+    .kanji-pequeno-folha {
+        display: none;
+    }
+    
+    
+    
+    .kanji-muito-pequeno-folha {
+        display: inline;
+        margin-top: -140px;
+        margin-left: -45px;
+        animation: none;
+    }
+}

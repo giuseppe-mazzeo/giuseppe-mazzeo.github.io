@@ -1,0 +1,377 @@
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+/*                    Configurações para todos od ficheiros html                     */
+/* = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = */
+
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;600&display=swap');
+
+
+@keyframes aumentar-tamanho {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes aumentar-diminuir-imagem {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes girar-balanço {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+:root {
+    --fonte-titulo-principal: "Lobster", sans-serif;
+    --fonte-titulo: "Poppins", sans-serif;
+    --fonte-paragrafo: "Poppins", sans-serif;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonte-paragrafo);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 17% 1fr 17%;
+    grid-template-rows: 100px 55px 1fr 70px;
+    grid-template-areas: 'header-area header-area header-area'
+                         'nav-area nav-area nav-area'
+                         'aside-area main-area .'
+                         'footer-area footer-area footer-area';
+    grid-gap: 10px;
+}
+
+
+
+header {
+    grid-area: header-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+    background-color: #00010D;
+}
+
+header section h1 {
+    font-size: 4em;
+    font-family: var(--fonte-titulo-principal);
+    letter-spacing: 2px;
+    color:  #F24B4B;
+}
+
+header section {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+header section div {
+    display: flex;
+    align-items: flex-end;
+}
+
+header section div span {
+    color: #F2F0D8;
+}
+
+header section div:first-child {
+    margin-right: 7px;
+}
+
+header section div:first-child > span {
+    transform: rotate(-20deg);
+}
+
+header section div:last-child {
+    margin-left: 7px;
+}
+
+header section div:last-child > span {
+    transform: rotate(20deg);
+}
+
+header section div:first-child span:last-child,
+header section div:last-child span:first-child {
+    font-size: 2em;
+}
+
+header section div:first-child span:first-child,
+header section div:last-child span:last-child {
+    font-size: 1.1em;
+}
+
+/* Para aquelas páginas que possuem um botão para voltar para o index */
+
+header a[href="home.html"] {
+    position: absolute;
+    display: flex;
+    left: 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #F2F0D8;
+}
+
+header a[href="home.html"] span:first-child {
+    font-size: 1.4em;
+    color: #F24B4B;
+}
+
+header a[href="home.html"]:hover span:first-child{
+    animation: aumentar-tamanho 2s ease-in-out infinite;
+}
+
+
+
+nav#menu {
+    grid-area: nav-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    background-color: #F2F0D8;
+}
+
+nav#menu > a {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #010326;
+}
+
+.botao-top {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0 10px;
+    color: black;
+    background-color: #F2F0D8;
+    text-align: center;
+    text-decoration: none;
+    transition: transform .5s ease;
+}
+
+nav#menu > a:hover .botao-top {
+    transform: scale(1.1);
+}
+
+nav#menu > a:active .botao-top {
+    transform: scale(1);
+}
+
+nav#menu > a.destaque-introducao span {
+    color: white;
+    background-color: #010326;
+}
+
+nav#menu > a.destaque-introducao .material-symbols-outlined {
+    display: none;
+}
+
+nav#menu > a.destaque-introducao:hover  {
+    border-color: #010326;
+    color: #010326;
+    animation: girar-balanço 1s ease-in-out infinite;
+}
+
+nav#menu > a .destaque-atual {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav#menu .material-symbols-outlined {
+    font-size: 1.3em;
+}
+
+nav#menu .destaque-symbols {
+    font-weight: bold;
+    color: #F24B4B;
+}
+
+
+
+main {
+    grid-area: main-area;
+    display: grid;
+    row-gap: 120px;
+    margin: auto;
+}
+
+main article:last-child {
+    margin-bottom: 80px;
+}
+
+
+
+article {
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2.6em;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    text-align: center;
+}
+
+article p {
+    padding: 3px 6px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-indent: 20px;
+    text-align: justify;
+    letter-spacing: 1.2px;
+    word-spacing: 3px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+
+
+.extra {
+    grid-area: aside-area;
+    position: sticky;
+    top: 120px;
+    left: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 90%;
+    height: 430px;
+    border: 4px solid black;
+    box-shadow: 8px 8px 0px black;
+    transition: .5s ease;
+}
+
+.extra:hover img {
+    animation: aumentar-diminuir-imagem 2s ease-in-out infinite;
+}
+
+.extra img {
+    width: 150px;
+    height: 170px;
+    margin: 0 auto;
+}
+
+.extra > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.extra h3 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: uppercase;
+}
+
+.extra p {
+    text-align: justify;
+    padding: 15px 10px;
+}
+
+.extra a {
+    width: 80%;
+    padding: 5px;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0px black;
+    margin: 15px auto;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    transition: .5s ease;
+}
+
+.extra a:hover {
+    border-color: #20448C;
+    color: white;
+    background-color: #20448C;
+    box-shadow: 4px 4px 0px #050c19;
+}
+
+.extra a:active {
+    transform: translate(2px ,2px);
+    transition: 0s ease;
+}
+
+.linha {
+    width: 90%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+
+footer {
+    grid-area: footer-area;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-top: 2px solid rgba(0, 0, 0, 0.211);
+    font-style: italic;
+}
+
+footer img {
+    width: 160px;
+    height: auto;
+}
+
+footer a {
+    color: gray;
+}

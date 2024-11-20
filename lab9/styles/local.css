@@ -1,0 +1,56 @@
+@import url('style.css');
+@import url('responsive.css');
+
+
+
+main {
+    grid-template-areas: '.';
+    row-gap: 120px;
+    margin-top: 20px;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main section > p {
+    max-width: 250px;
+}
+
+main section > div {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+main section iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 96%;
+    height: 100%;
+    border: 2px black solid;
+    margin: 0 auto;
+}
+
+ 
+
+
+
+@media screen and (max-width: 1500px) {
+    main section {
+        flex-direction: column;
+    }
+
+    main section > p {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
