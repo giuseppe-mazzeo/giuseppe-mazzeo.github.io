@@ -3,68 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript em ação</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="scripts/produtos.js" defer></script>
+    <title>Loja Virtual</title>
 </head>
 <body>
-    <div>
-        <a href="home.html">voltar</a>
-    </div>
+    <header>
+        <h1>Loja</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#area-produtos">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        Produtos
+                    </a>
+                </li>
+                <li>
+                    <a href="#area-carrinho">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        Carrinho
+                    </a>
+                    <span id="quantidade-no-carrinho">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <section id="ex1">
-            <p>1.Passa por aqui!</p>
-        </section>
+        <h1>Escolha seus produtos</h1>
 
-        <section id="ex2">
-            <p>2.Pinta-me!</p>
-            <button data-color="red">Red</button>
-            <button data-color="green">Green</button>
-            <button data-color="blue">Blue</button>
-        </section>
+        <aside id="mostra-detalhe-produto">
+        </aside>
 
-        <section id="ex3">
-            <p>3.Experimenra escrever...</p>
-            <input type="text">
-        </section>
-
-        <section id="ex4">
-            <div id="ex4o1">
-                <p>4.1.Escolha uma cor em inglês:</p>
-                <input type="text">
-                <button>submeter</button>
-            </div>
-            <div id="ex4o2">
-                <p>4.2.Escolha uma cor:</p>
-                <select>
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                </select>
-            </div>
-        </section>
-
-        <section id="ex5">
-            <span>5.</span>
-            <button>Conta!</button>
-            <span>0</span>
-        </section>
-
-        <section id="ex6">
-            <form>
-                <p>6.</p>
-                <input type="text">
-                <input type="number">
-                <button>submeter</button>
-            </form>
-            <p id="mostra-texto"></p>
-        </section>
-
-        <section id="ex7">
-            <p>7.Automatic Counter: <span>0</span></p>
+        <section id="area-produtos">
         </section>
     </main>
 
-    <script src="scripts/main.js"></script>
+    <aside id="area-carrinho">
+        <h1>Produtos no seu carrinho</h1>
+
+        <section>
+        </section>
+
+        <p>Custo total: <span id="custo-total">0.00</span> €</p>
+    </aside>
+
+    <footer>
+        <p>
+            DIW 2024
+        </p>
+    </footer>
 </body>
 </html>
