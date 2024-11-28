@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="scripts/produtos.js" defer></script>
+    <title>Loja Virtual</title>
+</head>
+<body>
+    <header>
+        <h1>Loja</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#area-produtos">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        Produtos
+                    </a>
+                </li>
+                <li>
+                    <a href="#area-carrinho">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        Carrinho
+                    </a>
+                    <span id="quantidade-no-carrinho">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Escolha seus produtos</h1>
+
+        <aside id="mostra-detalhe-produto">
+        </aside>
+
+        <section id="area-produtos">
+        </section>
+    </main>
+
+    <aside id="area-carrinho">
+        <h1>Produtos no seu carrinho</h1>
+
+        <section>
+        </section>
+
+        <p>Custo total: <span id="custo-total">0.00</span> €</p>
+    </aside>
+
+    <footer>
+        <p>
+            DIW 2024
+        </p>
+    </footer>
+</body>
+</html>
