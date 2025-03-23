@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
 
+:root {
+    --cor-cinza-claro: rgb(243, 243, 243);
+}
+
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -14,34 +21,70 @@ ul {
 
 
 
+body {
+    background-color: var(--cor-cinza-claro);
+}
+
+
+
+
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: auto;
-    height: 140px;
-}
-
-nav ul {
-    display: flex;
-    column-gap: 100px;
-    padding: 10px 30px;
-    border-radius: 40px;
+    height: 70px;
+    padding: 0 30px;
+    margin: 50px 100px;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.242);
+    background-color: white;
 }
 
-nav a {
+nav > div,
+nav ul:nth-of-type(1),
+nav ul:nth-of-type(2) {
+    width: 33.3%;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+nav span:nth-of-type(1) {
+    font-size: 2.1em;
+}
+
+nav span:nth-of-type(2) {
+    margin-bottom: -7px;
+    font-size: .9em;
+}
+
+nav ul:nth-of-type(1) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 100px;
+}
+
+nav ul:nth-of-type(1) a {
     display: block;
-    width: 90px;
-    border-bottom: 2px solid white;
     color: black;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
-nav a:hover {
+nav ul:nth-of-type(1) a:hover {
     border-bottom: 2px solid black;
+}
+
+nav ul:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
 }
 
 
@@ -66,13 +109,12 @@ main {
     justify-content: center;
     align-items: center;
     row-gap: 10px;
-
 }
 
 .campo-perfil > img {
     width: 200px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 30px;
     border: 3px solid black;
 }
 
@@ -106,6 +148,9 @@ main {
 
 .campo-sobre-mim > div:first-child {
     grid-area: div-texto-sobre-mim;
+    padding: 12px 17px;
+    border-radius: 0 20px;
+    background-color: white;
 }
 
 .campo-sobre-mim > div:first-child h1 {
@@ -116,9 +161,22 @@ main {
     margin-top: 20px;
     text-indent: 20px;
     font-size: 1.05em;
+    text-align: justify;
     letter-spacing: .5px;
     word-spacing: 2px;
-    text-align: justify;
+    line-height: 22px;
+}
+
+
+
+
+.campo-interesses,
+.campo-educacao {
+    width: 270px;
+    padding: 7px 12px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: var(--cor-cinza);
 }
 
 
@@ -127,9 +185,6 @@ main {
 .campo-interesses {
     grid-area: section-interesses;
 }
-
-
-
 
 .campo-educacao {
     grid-area: section-educacao;
