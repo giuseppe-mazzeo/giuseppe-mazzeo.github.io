@@ -1,0 +1,25 @@
+@import url('sobre-mim.css');
+
+
+
+
+main {
+    display: flex;
+    
+    margin: 0 20px;
+}
+
+
+
+
+.campo-projeto {
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.campo-projeto img {
+    width: 100px;
+    height: auto;
+    background-color: aqua;
+}
