@@ -1,25 +1,91 @@
 @import url('sobre-mim.css');
 
 
+@keyframes mostrar-ferramentas {
+    0% { top: 0; }
+
+    50% { top: -50px; }
+
+    100% { top: 0; }
+}
 
 
 main {
     display: flex;
-    
-    margin: 0 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 100px 0 0 0;
 }
 
 
 
 
 .campo-projeto {
-    width: 200px;
-    height: 250px;
-    border: 1px solid black;
+    position: relative;
+    width: 270px;
+    height: 320px;
+    border-radius: 10px;
 }
 
-.campo-projeto img {
+.campo-projeto a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+.campo-ferramentas-usadas-projeto {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: -1;
+    display: flex;
+    column-gap: 6px;
+    transition: ease-in-out;
+}
+
+.campo-projeto:hover {
+    animation: mostrar-ferramentas 2s ease-in-out infinite;
+}
+
+.campo-ferramentas-usadas-projeto img {
+    width: 40px;
+    height: auto;
+}
+
+
+
+
+.campo-imagem-projeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 140px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.campo-imagem-projeto img {
     width: 100px;
     height: auto;
-    background-color: aqua;
+}
+
+
+
+
+.campo-conteudo-projeto {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 8px;
+    padding-top: 12px;
+}
+
+.campo-conteudo-projeto h1 {
+}
+
+.campo-conteudo-projeto p {
 }
