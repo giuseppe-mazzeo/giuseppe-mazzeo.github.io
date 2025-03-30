@@ -1,13 +1,5 @@
-@import url('sobre-mim.css');
+@import url('index.css');
 
-
-@keyframes mostrar-ferramentas {
-    0% { top: 0; }
-
-    50% { top: -50px; }
-
-    100% { top: 0; }
-}
 
 
 main {
@@ -28,6 +20,10 @@ main {
     border-radius: 10px;
 }
 
+.campo-projeto:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.186);
+}
+
 .campo-projeto a {
     text-decoration: none;
     color: black;
@@ -43,11 +39,12 @@ main {
     z-index: -1;
     display: flex;
     column-gap: 6px;
-    transition: ease-in-out;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
 }
 
-.campo-projeto:hover {
-    animation: mostrar-ferramentas 2s ease-in-out infinite;
+.campo-projeto:hover .campo-ferramentas-usadas-projeto {
+    transform: translateY(-45px);
 }
 
 .campo-ferramentas-usadas-projeto img {
@@ -71,6 +68,12 @@ main {
 .campo-imagem-projeto img {
     width: 100px;
     height: auto;
+    transition: transform  0.5s ease-in-out;
+}
+
+.campo-projeto:hover .campo-imagem-projeto img {
+    transform: scale(1.1);
+    
 }
 
 

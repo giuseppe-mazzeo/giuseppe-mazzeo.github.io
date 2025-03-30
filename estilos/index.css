@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@keyframes imagem-pulando-feliz {
+    0% {
+        transform: scaleY(1);
+    }
+    25% {
+        transform: scaleY(1) translateY(-10px);
+    }
+    50% {
+        transform: scaleY(0.6) translateY(10px);
+    }
+
+    60% {transform: scaleY(0.6) translateX(5px) translateY(10px);}
+    65% {transform: scaleY(0.6) translateX(-5px) translateY(10px);}
+    
+    75% {
+        transform: scaleY(0.6) translateX(0) translateY(10px);
+    }
+    100% {
+      transform: scaleY(1) translateY(0);
+    }
+}
+
+
+
 :root {
     --cor-cinza-claro: rgb(243, 243, 243);
 }
@@ -98,6 +122,14 @@ nav ul:nth-of-type(2) li img {
     border-radius: 6.5px;
 }
 
+nav ul:nth-of-type(2) li:hover img {
+    animation: imagem-pulando-feliz infinite 1.5s ease-in-out;
+    animation-delay: 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
 nav ul:nth-of-type(2) li:nth-of-type(3) img {
     border: none;
 }
@@ -123,7 +155,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 13px;
 }
 
 .campo-perfil > img {
@@ -134,13 +166,12 @@ main {
 }
 
 .campo-perfil > p:nth-of-type(1) {
+    position: relative;
     font-size: 1.4em;
 }
 
-.campo-perfil > ul {
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
+.campo-perfil > p:nth-of-type(2) {
+    text-align: center;
 }
 
 
@@ -148,6 +179,7 @@ main {
 
 .campo-sobre-mim {
     grid-area: article-sobre-mim;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -164,17 +196,53 @@ main {
     position: relative;
 }
 
-.campo-sobre-mim > div:first-child span {
+.campo-sobre-mim > div:first-child::after {
+    content: '';
+    position: absolute;
+    top: 58px;
+    left: 12px;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+.campo-sobre-mim > div:first-child:hover::after {
+    width: 405px;
+}
+
+.campo-sobre-mim > div:first-child > span {
+    cursor: default;
     position: absolute;
     top: 93px;
-    left: -30px;
+    left: -3px;
+    width: 20px;
     height: 190px;
-    border-right: 1px solid black;
+    border-left: 1px solid black;
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
     writing-mode: sideways-lr;
+    color: rgba(0, 0, 0, 0.57);
+    background-color: var(--cor-cinza-claro);
+    transition: height 0.5s ease-in-out;
 }
+
+.campo-sobre-mim > div:first-child > span span {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 190px;
+    transition: left 0.5s ease-in-out;
+    transition-delay: 0.8s;
+}
+
+.campo-sobre-mim > div:first-child:hover > span span {
+    left: -23px;
+}
+
 
 .campo-sobre-mim > div div {
     padding: 20px 17px;
@@ -225,6 +293,8 @@ main {
     width: .3px;
     height: 100px;
     background-color: black;
+    transition: height 0.5s ease-in-out;
+    transition-delay: 0.5s;
 }
 
 .campo-interesses::after,
@@ -238,7 +308,52 @@ main {
     height: 10px;
     border: 1.5px solid black;
     border-radius: 50%;
+    transition: top 0.5s ease-in-out;
 }
+
+.campo-interesses > h2::after,
+.campo-educacao > h2::after {
+    content: '';
+    position: absolute;
+    top: 33px;
+    left: 4px;
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+/* - - - */
+/* Animacao */
+
+.campo-interesses:hover::before,
+.campo-educacao:hover::before {
+    height: 0;
+}
+
+.campo-interesses:not(:hover)::before,
+.campo-educacao:not(:hover)::before {
+    transition-delay: 1.5s;
+}
+
+.campo-interesses:hover::after,
+.campo-educacao:hover::after {
+    top: 27px;
+}
+
+.campo-interesses:not(:hover)::after,
+.campo-educacao:not(:hover)::after {
+    transition-delay: 2s;
+}
+
+.campo-interesses:hover > h2::after,
+.campo-educacao:hover > h2::after {
+    width: 116px;
+}
+
+/* - - - */
 
 .campo-interesses ul,
 .campo-educacao ul {
