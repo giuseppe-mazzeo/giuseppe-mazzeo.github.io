@@ -59,6 +59,8 @@ ul {
 
 body {
     background-color: var(--cor-cinza-claro);
+    max-width:  1500px;
+    margin: auto;
 }
 
 
@@ -98,7 +100,7 @@ nav > div span:nth-of-type(1) {
 
 nav > div span:nth-of-type(2) {
     margin-bottom: -9px;
-    margin-left: -8px;
+    margin-left: -26px;
     font-size: .9em;
     font-weight: 300;
 }
@@ -393,4 +395,163 @@ main {
 .campo-interesses ul li,
 .campo-educacao ul li {
     margin-top: 6px;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    nav {
+        position: relative;
+        align-items: flex-start;
+        height: 140px;
+        padding: 15px 20px;
+        margin: 20px 10px 30px 10px;
+    }
+
+    nav > div span:nth-of-type(2) {
+        margin-left: -50px;
+        margin-bottom: -15px;
+    }
+
+    nav ul:nth-of-type(1) {
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul:nth-of-type(1) a {
+        width: 100px;
+    }
+
+    nav > ul:nth-of-type(2) li:hover img {
+        animation: none;
+    }
+
+
+
+    
+    main {
+        position: relative;
+        grid-template-columns: 100%;
+        grid-template-areas: 'article-perfil'
+                             'article-sobre-mim';
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    .campo-sobre-mim {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 'div-texto-sobre-mim'
+                             'section-educacao'
+                             'section-interesses';
+        row-gap: 25px;
+        margin: 0;
+    }
+
+    .campo-sobre-mim > div:first-child {
+        grid-area: div-texto-sobre-mim;
+        position: relative;
+    }
+
+    .campo-sobre-mim > div:first-child::after {
+        display: none;
+    }
+
+    .campo-sobre-mim > div:first-child > span {
+        display: none;
+    }
+
+    .campo-sobre-mim > div:first-child > span span {
+        display: none;
+    }
+
+    .campo-sobre-mim > div > div {
+        padding: 0;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 700px) and (max-width: 1050px) {
+    nav {
+        position: relative;
+        align-items: flex-start;
+        height: 140px;
+        padding: 15px 20px;
+        margin: 20px 10px 30px 10px;
+    }
+
+    nav > div span:nth-of-type(2) {
+        margin-left: -50px;
+        margin-bottom: -15px;
+    }
+
+    nav ul:nth-of-type(1) {
+        position: absolute;
+        top: 95px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul:nth-of-type(1) a {
+        width: 100px;
+    }
+
+    nav > ul:nth-of-type(2) li:hover img {
+        animation: none;
+    }
+
+
+
+    
+    main {
+        position: relative;
+        grid-template-columns: 100%;
+        grid-template-areas: 'article-perfil'
+                             'article-sobre-mim';
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    .campo-sobre-mim {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
+                             'section-interesses section-educacao';
+        row-gap: 25px;
+        margin: auto;
+    }
+
+    .campo-sobre-mim > div:first-child {
+        grid-area: div-texto-sobre-mim;
+        position: relative;
+    }
+
+    .campo-sobre-mim > div:first-child::after {
+        display: none;
+    }
+
+    .campo-sobre-mim > div:first-child > span {
+        display: none;
+    }
+
+    .campo-sobre-mim > div:first-child > span span {
+        display: none;
+    }
+
+    .campo-sobre-mim > div > div {
+        padding: 0;
+    }
+
+
 }
