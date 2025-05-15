@@ -95,3 +95,12 @@ main {
 .campo-conteudo-projeto p {
     font-family: var(--fonte-inter);
 }
+
+
+
+
+@media only screen and (max-width: 1050px) {
+    .campo-projeto .campo-ferramentas-usadas-projeto {
+        transform: translateY(-45px);
+    }
+}

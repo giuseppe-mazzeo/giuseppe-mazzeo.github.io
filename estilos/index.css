@@ -350,35 +350,35 @@ main {
 
 /* - - - */
 /* Animacao */
+@media only screen and (min-width: 1050px) {
+    .campo-interesses:hover::before,
+    .campo-educacao:hover::before {
+        height: 0;
+    }
 
-.campo-interesses:hover::before,
-.campo-educacao:hover::before {
-    height: 0;
+    .campo-interesses:not(:hover)::before,
+    .campo-educacao:not(:hover)::before {
+        transition-delay: 1.5s;
+    }
+
+    .campo-interesses:hover::after,
+    .campo-educacao:hover::after {
+        top: 27px;
+    }
+
+    .campo-interesses:not(:hover)::after,
+    .campo-educacao:not(:hover)::after {
+        transition-delay: 2s;
+    }
+
+    .campo-interesses:hover > h2::after {
+        width: 134px;
+    }
+
+    .campo-educacao:hover > h2::after {
+        width: 128px;
+    }
 }
-
-.campo-interesses:not(:hover)::before,
-.campo-educacao:not(:hover)::before {
-    transition-delay: 1.5s;
-}
-
-.campo-interesses:hover::after,
-.campo-educacao:hover::after {
-    top: 27px;
-}
-
-.campo-interesses:not(:hover)::after,
-.campo-educacao:not(:hover)::after {
-    transition-delay: 2s;
-}
-
-.campo-interesses:hover > h2::after {
-    width: 134px;
-}
-
-.campo-educacao:hover > h2::after {
-    width: 128px;
-}
-
 /* - - - */
 
 .campo-interesses ul,
