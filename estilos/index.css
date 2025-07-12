@@ -106,6 +106,7 @@ nav > ul:nth-of-type(1) {
     align-items: center;
     column-gap: 100px;
     width: 50%;
+    height: 20px;
 }
 
 nav > ul:nth-of-type(1) a {
@@ -371,7 +372,7 @@ main {
 
 /* - - - */
 /* Animacao */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1200px) {
     .campo-interesses:hover::before,
     .campo-educacao:hover::before {
         height: 0;
@@ -465,6 +466,20 @@ main {
 
 
 
+    .campo-perfil > img:hover {
+        transform: scale(1);
+    }
+
+
+
+
+    nav > ul:nth-of-type(1) a:hover:after {
+        width: 0;
+    }
+
+
+
+
     .campo-sobre-mim {
         grid-template-columns: 100%;
         grid-template-rows: auto;
@@ -500,7 +515,7 @@ main {
 
 
 
-@media only screen and (min-width: 700px) and (max-width: 1050px) {
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
     nav {
         position: relative;
         align-items: flex-start;
@@ -544,6 +559,20 @@ main {
 
 
 
+    .campo-perfil > img:hover {
+        transform: scale(1);
+    }
+
+
+
+
+    nav > ul:nth-of-type(1) a:hover:after {
+        width: 0;
+    }
+
+
+
+
     .campo-sobre-mim {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -573,6 +602,19 @@ main {
     .campo-sobre-mim > div > div {
         padding: 0;
     }
+}
 
+@media only screen and (max-width: 650px) {
+    nav > ul:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        border-radius: 0 0 10px 10px;
+        background-color: white;
+    }
 
+    main {
+        margin-top: 300px;
+    }
 }
