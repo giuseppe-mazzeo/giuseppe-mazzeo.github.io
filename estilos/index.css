@@ -148,7 +148,8 @@ nav > ul:nth-of-type(2) {
     display: flex;
     justify-content: flex-end;
     column-gap: 15px;
-    width: 20%;
+    width: 100px;
+    min-width: 20%;
 }
 
 nav > ul:nth-of-type(2) li {
@@ -262,30 +263,38 @@ main {
     top: 93px;
     left: -3px;
     width: 20px;
-    height: 190px;
+    height: 0;
     border-left: 1px solid black;
     font-family: var(--fonte-inter);
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
     writing-mode: sideways-lr;
-    color: rgba(0, 0, 0, 0.57);
     background-color: var(--cor-cinza-claro);
     transition: height 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+.campo-sobre-mim > div:first-child:hover > span {
+    height: 65%;
 }
 
 .campo-sobre-mim > div:first-child > span span {
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: 50%;
     left: 0;
     height: 190px;
-    transition: left 0.5s ease-in-out;
-    transition-delay: 0.8s;
+    color: var(--cor-cinza-claro);
+    transition: 0.5s ease-in-out;
+    transform: translateY(-50%);
+    transition-delay: .4s;
 }
 
 .campo-sobre-mim > div:first-child:hover > span span {
     left: -25px;
+    color: rgba(0, 0, 0, 0.57);
+    transition-delay: 2.1s;
 }
 
 
@@ -486,8 +495,9 @@ main {
         grid-template-areas: 'div-texto-sobre-mim'
                              'section-educacao'
                              'section-interesses';
-        row-gap: 25px;
+        row-gap: 60px;
         margin: 0;
+        margin-bottom: 50px;
     }
 
     .campo-sobre-mim > div:first-child {
