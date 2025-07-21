@@ -180,7 +180,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 'article-perfil article-sobre-mim';
-    margin: 0 20px;
+    margin: 0 80px;
 }
 
 
