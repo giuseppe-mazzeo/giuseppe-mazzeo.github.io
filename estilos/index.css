@@ -181,6 +181,7 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 'article-perfil article-sobre-mim';
     margin: 0 80px;
+    margin-bottom: 50px;
 }
 
 
@@ -230,7 +231,6 @@ main {
     grid-template-rows: auto auto;
     grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
                          'section-interesses section-educacao';
-    row-gap: 25px;
     margin-top: 10px;
     margin-left: -30px;
     max-width: 900px;
@@ -345,7 +345,7 @@ main {
     top: 38px;
     left: -1.5px;
     width: .3px;
-    height: 100px;
+    height: 110px;
     background-color: black;
     transition: height 0.5s ease-in-out;
     transition-delay: 0.5s;
@@ -563,7 +563,7 @@ main {
         grid-template-areas: 'article-perfil'
                              'article-sobre-mim';
         row-gap: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 70px;
     }
 
 
