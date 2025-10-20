@@ -231,7 +231,6 @@ main {
     grid-template-rows: auto auto;
     grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
                          'section-interesses section-educacao';
-    margin-top: 10px;
     margin-left: -30px;
     max-width: 900px;
 }
