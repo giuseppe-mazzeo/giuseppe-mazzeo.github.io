@@ -11,41 +11,64 @@
     <header>
         <nav>
             <div>
-                <span>Giuseppe</span>
-                <span>WebPortifólio</span>
+                <span class="nome-header">Giuseppe</span>
+                <span class="portifolio-header">WebPortifólio</span>
             </div>
 
-            <ul>
-                <li><a target="_self" href="index.html">Sobre mim</a></li>
-                <li><a a target="_self" href="paginas/projetos.html">Projetos</a></li>
-                <li><a a target="_self" href="paginas/certificados.html">Certificados</a></li>
+            <ul class="paginas-header">
+                <li>
+                    <a href="index.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="">Trabalhos</a>
+                </li>
+                <li>
+                    <a href="paginas/projetos.html">Projetos</a>
+                </li>
+                <li>
+                    <a href="paginas/certificados.html">Certificados</a>
+                </li>
             </ul>
     
-            <ul>
-                <li><a a target="_blank" href="https://github.com/giuseppe-mazzeo"><img src="imagens/logo-redes-sociais/github.png" alt="Ícone do GitHub, para acessar meu GitHub"></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/giuseppe-nabais-dur%C3%A3o-mazzeo-719022260/"><img src="imagens/logo-redes-sociais/linkedin.png" alt="Ícone do Linkedin, para acessar meu Linkedin"></a></li>
+            <ul class="redes-header">
+                <li>
+                    <a target="_blank" href="https://github.com/giuseppe-mazzeo">
+                        <img src="imagens/logo-redes-sociais/github.png" alt="Ícone do GitHub, para acessar meu GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/giuseppe-nabais-dur%C3%A3o-mazzeo-719022260/">
+                        <img src="imagens/logo-redes-sociais/linkedin.png" alt="Ícone do Linkedin, para acessar meu Linkedin">
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main class="main">
+    <main>
         <article class="campo-perfil">
             <img src="https://avatars.githubusercontent.com/u/126293866?v=4" alt="Perfil de avatar da minha conta do GitHub.">
             
-            <p>Giuseppe Mazzeo</p>
+            <p class="nome-perfil">Giuseppe Mazzeo</p>
 
-            <p>Estudante em<br>Engenharia Informática</p>
+            <p class="estudante-perfil">Estudante em<br>Engenharia Informática</p>
+
+            <ul class="contato-perfil">
+                <li>
+                    <p><b>Email</b><br> giumazz03@gmail.com</p>
+                </li>
+            </ul>
         </article>
 
-        <article class="campo-sobre-mim">
-            <div>
+        <article class="apresentacao">
+            <section class="texto-apresentacao">
                 <span><span>Sobre mim</span></span>
     
                 <div>
                     <h1>Olá visitante!</h1>
 
                     <p>
-                         Irei me apresentar, sou um entusiasta por programação web e desenvolvimento de software, sempre em busca de aprender novas tecnologias para expandir meus conhecimentos.
+                        Irei me apresentar, sou um entusiasta por programação web e desenvolvimento de software, sempre em busca de aprender novas tecnologias para expandir meus conhecimentos.
                     </p>
                     <p>
                         Ao longo dos anos, participei em diversos projetos colaborativos, onde aprendi a enfrentar desafios e encontrar soluções inovadoras em equipe. Essas experiências fortaleceram minha capacidade de adaptação e resolução de problemas.
@@ -58,7 +81,63 @@
                         Estou sempre aberto a novas oportunidades e colaborações. Se quiser conversar ou saber mais sobre meu trabalho, sinta-se à vontade para entrar em contato comigo: <b>giumazz03@gmail.com</b>
                     </p>
                 </div>
-            </div>
+            </section>
+
+            <section class="competencias">
+                <h2>Competências</h2>
+
+                <div class="competencias-container">
+                    <div class="competencias-card">
+                        <h3>Linguagens de Programação</h3>
+                        
+                        <ol>
+                            <li><p>Java</p></li>
+                            <li><p>Python</p></li>
+                            <li><p>C</p></li>
+                            <li><p>Kothlyn</p></li>
+                            <li><p>JavaScript</p></li>
+                            <li><p>SQL</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="competencias-card">
+                        <h3>Tecnologias & Frameworks</h3>
+
+                        <ol>
+                            <li><p>React</p></li>
+                            <li><p>Node.js</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="competencias-card">
+                        <h3>Ferramentas</h3>
+
+                        <ol>
+                            <li><p>Git / GitHub</p></li>
+                            <li><p>VS Code</p></li>
+                            <li><p>Docker</p></li>
+                            <li><p>Excel</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="competencias-card">
+                        <h3>Software & Plataformas</h3>
+
+                        <ol>
+                            <li><p>Arduino IDE</p></li>
+                            <li><p>Linux</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="competencias-card">
+                        <h3>Metodologias</h3>
+
+                        <ol>
+                            <li><p>Testes Unitários</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
             
             <section class="campo-interesses">
                 <h2>Interesses</h2>

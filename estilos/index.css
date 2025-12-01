@@ -3,25 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
 @keyframes imagem-pulando-feliz {
-    0% {
-        transform: scaleY(1);
-    }
-    25% {
-        transform: scaleY(1) translateY(-10px);
-    }
-    50% {
-        transform: scaleY(0.6) translateY(10px);
-    }
-
-    60% {transform: scaleY(0.6) translateX(5px) translateY(10px);}
-    65% {transform: scaleY(0.6) translateX(-5px) translateY(10px);}
-    
-    75% {
-        transform: scaleY(0.6) translateX(0) translateY(10px);
-    }
-    100% {
-      transform: scaleY(1) translateY(0);
-    }
+    0%   { transform: scaleY(1); }
+    25%  { transform: scaleY(1)   translateY(-10px); }
+    50%  { transform: scaleY(0.6) translateY(10px); }
+    60%  { transform: scaleY(0.6) translateX(5px)  translateY(10px); }
+    65%  { transform: scaleY(0.6) translateX(-5px) translateY(10px); }
+    75%  { transform: scaleY(0.6) translateX(0)    translateY(10px); }
+    100% { transform: scaleY(1)   translateY(0); }
 }
 
 
@@ -58,11 +46,22 @@ ul {
 
 
 body {
-    background-color: var(--cor-cinza-claro);
+    position: relative;
     max-width:  1500px;
     margin: auto;
+    background-color: var(--cor-cinza-claro);
 }
 
+
+
+header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: calc(100% - 120px);
+    margin: 40px 60px 50px 60px;
+}
 
 
 
@@ -73,7 +72,6 @@ nav {
     width: auto;
     height: 70px;
     padding: 0 30px;
-    margin: 40px 100px 50px 100px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.242);
     background-color: white;
@@ -89,18 +87,18 @@ nav > div {
     font-weight: bold;
 }
 
-nav > div span:nth-of-type(1) {
+.nome-header {
     font-size: 2.1em;
 }
 
-nav > div span:nth-of-type(2) {
+.portifolio-header {
     margin-bottom: -9px;
     margin-left: -26px;
     font-size: .9em;
     font-weight: 300;
 }
 
-nav > ul:nth-of-type(1) {
+.paginas-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -109,7 +107,7 @@ nav > ul:nth-of-type(1) {
     height: 20px;
 }
 
-nav > ul:nth-of-type(1) a {
+.paginas-header a {
     position: relative;
     display: block;
     color: black;
@@ -119,7 +117,7 @@ nav > ul:nth-of-type(1) a {
     text-decoration: none;
 }
 
-nav > ul:nth-of-type(1) a::after {
+.paginas-header a::after {
     content: '';
     position: absolute;
     top: 20px;
@@ -132,19 +130,19 @@ nav > ul:nth-of-type(1) a::after {
     transition: width 0.5s ease-in-out;
 }
 
-nav > ul:nth-of-type(1) a:hover:after {
+.paginas-header a:hover:after {
     width: 100%;
 }
 
-nav > ul:nth-of-type(1) li {
+.paginas-header li {
     font-weight: 340;
 }
 
-nav > ul:nth-of-type(1) li:nth-of-type(1) {
+.paginas-header li:nth-of-type(1) {
     font-weight: bold;
 }
 
-nav > ul:nth-of-type(2) {
+.redes-header {
     display: flex;
     justify-content: flex-end;
     column-gap: 15px;
@@ -152,19 +150,19 @@ nav > ul:nth-of-type(2) {
     min-width: 20%;
 }
 
-nav > ul:nth-of-type(2) li {
+.redes-header li {
     width: 34px;
     height: 34px;
 }
 
-nav > ul:nth-of-type(2) li img {
+.redes-header li img {
     width: 100%;
     height: 100%;
     border: 3px solid black;
     border-radius: 7px;
 }
 
-nav > ul:nth-of-type(2) li:hover img {
+.redes-header li:hover img {
     animation: imagem-pulando-feliz infinite 1.5s ease-in-out;
     animation-delay: 0.3s;
     animation-iteration-count: 1;
@@ -180,7 +178,7 @@ main {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 'article-perfil article-sobre-mim';
-    margin: 0 80px;
+    margin: 150px 80px;
     margin-bottom: 50px;
 }
 
@@ -189,7 +187,9 @@ main {
 
 .campo-perfil {
     grid-area: article-perfil;
-    position: relative;
+    position: fixed;
+    top: 150px;
+    left: 150px;
     align-self: start;
     display: flex;
     flex-direction: column;
@@ -210,37 +210,42 @@ main {
     transform: scale(1.05);
 }
 
-.campo-perfil > p:nth-of-type(1) {
-    position: relative;
+.nome-perfil {
     font-size: 1.4em;
 }
 
-.campo-perfil > p:nth-of-type(2) {
+.estudante-perfil, .contato-perfil {
     font-size: .9em;
     text-align: center;
 }
 
+.contato-perfil {
+    margin-top: 10px;
+}
 
 
 
-.campo-sobre-mim {
+
+.apresentacao {
     grid-area: article-sobre-mim;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
+                         'section-competencias section-competencias'
                          'section-interesses section-educacao';
     margin-left: -30px;
+    margin-bottom: 40px;
     max-width: 900px;
 }
 
-.campo-sobre-mim > div:first-child {
+.texto-apresentacao {
     grid-area: div-texto-sobre-mim;
     position: relative;
 }
 
-.campo-sobre-mim > div:first-child::after {
+.texto-apresentacao::after {
     content: '';
     position: absolute;
     top: 58px;
@@ -252,11 +257,11 @@ main {
     transition: width 0.5s ease-in-out;
 }
 
-.campo-sobre-mim > div:first-child:hover::after {
+.texto-apresentacao:hover::after {
     width: 203px;
 }
 
-.campo-sobre-mim > div:first-child > span {
+.texto-apresentacao > span {
     cursor: default;
     position: absolute;
     top: 93px;
@@ -274,11 +279,11 @@ main {
     transition-delay: 1s;
 }
 
-.campo-sobre-mim > div:first-child:hover > span {
+.texto-apresentacao:hover > span {
     height: 65%;
 }
 
-.campo-sobre-mim > div:first-child > span span {
+.texto-apresentacao > span span {
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -290,24 +295,26 @@ main {
     transition-delay: .4s;
 }
 
-.campo-sobre-mim > div:first-child:hover > span span {
+.texto-apresentacao:hover > span span {
     left: -25px;
     color: rgba(0, 0, 0, 0.57);
     transition-delay: 2.1s;
 }
 
-
-.campo-sobre-mim > div > div {
+.texto-apresentacao > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     padding: 20px 17px;
+    padding-bottom: 0;
     border-radius: 0 20px;
 }
 
-.campo-sobre-mim > div > div h1 {
+.texto-apresentacao > div h1 {
     font-size: 2em;
 }
 
-.campo-sobre-mim > div > div p {
-    margin: 20px 0;
+.texto-apresentacao > div p {
     text-indent: 20px;
     font-size: 1.05em;
     text-align: justify;
@@ -316,6 +323,60 @@ main {
     line-height: 22px;
 }
 
+
+
+
+.competencias {
+    grid-area: section-competencias;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    height: fit-content;
+    margin-top: 200px;
+    margin-bottom: 60px;
+}
+
+.competencias h2 {
+    text-align: center;
+}
+
+.competencias-container {
+    display: flex;
+    gap: 10px;
+}
+
+.competencias-card {
+    cursor: default;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.716);
+    background-color: rgba(128, 128, 128, 0.242);
+    transition: transform .2s ease-in-out;
+}
+.competencias-card:hover {
+    transform: scale(1.05);
+}
+.competencias-card h3 {
+    display: flex;
+    align-items: start;
+    text-align: center;
+    min-height: 80px;
+}
+.competencias-card ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    list-style-position: inside;
+}
+.competencias-card li p {
+    display: inline;
+    text-align: justify;
+}
 
 
 
@@ -378,8 +439,29 @@ main {
     transition-delay: 1s;
 }
 
-/* - - - */
-/* Animacao */
+.campo-interesses ul,
+.campo-educacao ul {
+    list-style-type: circle;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.campo-educacao ul {
+    list-style: "🎓  "
+}
+
+.campo-interesses ul li,
+.campo-educacao ul li {
+    margin-top: 6px;
+}
+
+
+
+
+
+
+
+
 @media only screen and (min-width: 1200px) {
     .campo-interesses:hover::before,
     .campo-educacao:hover::before {
@@ -409,26 +491,6 @@ main {
         width: 128px;
     }
 }
-/* - - - */
-
-.campo-interesses ul,
-.campo-educacao ul {
-    list-style-type: circle;
-    margin-top: 20px;
-    margin-left: 35px;
-}
-
-.campo-educacao ul {
-    list-style: "🎓  "
-}
-
-.campo-interesses ul li,
-.campo-educacao ul li {
-    margin-top: 6px;
-}
-
-
-
 
 @media only screen and (max-width: 700px) {
     nav {
@@ -439,28 +501,29 @@ main {
         margin: 20px 10px 30px 10px;
     }
 
-    nav > div span:nth-of-type(2) {
+    .portifolio-header {
         margin-left: -50px;
         margin-bottom: -15px;
     }
 
-    nav ul:nth-of-type(1) {
+    .paginas-header a:hover:after {
+        width: 0;
+    }
+
+    .paginas-header {
         position: absolute;
         top: 95px;
         left: 0;
         width: 100%;
     }
 
-    nav ul:nth-of-type(1) a {
+    .paginas-header a {
         width: 100px;
     }
 
-    nav > ul:nth-of-type(2) li:hover img {
+    .redes-header li:hover img {
         animation: none;
     }
-
-
-
     
     main {
         position: relative;
@@ -471,22 +534,9 @@ main {
         margin-bottom: 30px;
     }
 
-
-
-
     .campo-perfil > img:hover {
         transform: scale(1);
     }
-
-
-
-
-    nav > ul:nth-of-type(1) a:hover:after {
-        width: 0;
-    }
-
-
-
 
     .campo-sobre-mim {
         grid-template-columns: 100%;
@@ -521,9 +571,6 @@ main {
     }
 }
 
-
-
-
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
     nav {
         position: relative;
@@ -533,28 +580,29 @@ main {
         margin: 20px 10px 30px 10px;
     }
 
-    nav > div span:nth-of-type(2) {
+    .portifolio-header {
         margin-left: -50px;
         margin-bottom: -15px;
     }
 
-    nav ul:nth-of-type(1) {
+    .paginas-header {
         position: absolute;
         top: 95px;
         left: 0;
         width: 100%;
     }
 
-    nav ul:nth-of-type(1) a {
+    .paginas-header a {
         width: 100px;
     }
 
-    nav > ul:nth-of-type(2) li:hover img {
-        animation: none;
+    .redes-header a:hover:after {
+        width: 0;
     }
 
-
-
+    .redes-header li:hover img {
+        animation: none;
+    }
     
     main {
         position: relative;
@@ -565,22 +613,9 @@ main {
         margin-bottom: 70px;
     }
 
-
-
-
     .campo-perfil > img:hover {
         transform: scale(1);
     }
-
-
-
-
-    nav > ul:nth-of-type(1) a:hover:after {
-        width: 0;
-    }
-
-
-
 
     .campo-sobre-mim {
         grid-template-columns: 1fr 1fr;
@@ -614,7 +649,7 @@ main {
 }
 
 @media only screen and (max-width: 650px) {
-    nav > ul:nth-of-type(1) {
+    .paginas-header {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -624,7 +659,7 @@ main {
         background-color: white;
     }
 
-    nav > ul:nth-of-type(1) li a {
+    .paginas-header li a {
         width: 100%;
     }
 
