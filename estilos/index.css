@@ -186,7 +186,7 @@ main {
     grid-template-rows: auto;
     grid-template-areas: 'article-perfil article-sobre-mim';
     margin: 150px 80px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 
