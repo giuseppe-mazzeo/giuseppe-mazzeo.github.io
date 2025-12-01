@@ -11,6 +11,13 @@
     75%  { transform: scaleY(0.6) translateX(0)    translateY(10px); }
     100% { transform: scaleY(1)   translateY(0); }
 }
+@keyframes movimentacao-seta {
+    0%   { top: 92px; }
+    25%  { top: 122px; }
+    50%  { top: 152px; }
+    75%  { top: 182px; }
+    100% { top: 212px; opacity: 0%;}
+}
 
 
 
@@ -233,6 +240,7 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
+                         'transicao-circulo transicao-circulo'
                          'section-competencias section-competencias'
                          'section-interesses section-educacao';
     margin-left: -30px;
@@ -325,6 +333,44 @@ main {
 
 
 
+.transicao-circulo {
+    grid-area: transicao-circulo;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    height: 350px;
+}
+.circulo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.seta {
+    position: absolute;
+    top: 92px;
+    width: 10px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    animation: infinite 4s ease-in-out;
+}
+.transicao-circulo:hover .seta {
+    animation-name: movimentacao-seta;
+}
+.seta-direita {
+    transform: translateX(7.5px) rotate(45deg);
+}
+.seta-esquerda {
+    transform: translateX(-7.5px) rotate(-45deg);
+}
+
+
+
+
+
 
 .competencias {
     grid-area: section-competencias;
@@ -332,12 +378,39 @@ main {
     flex-direction: column;
     row-gap: 30px;
     height: fit-content;
-    margin-top: 200px;
     margin-bottom: 60px;
 }
-
 .competencias h2 {
+    font-size: 2em;
     text-align: center;
+}
+
+.legenda-competencias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    width: fit-content;
+    padding: 3px 10px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.192);
+}
+.legenda-competencias p {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.legenda-competencias span {
+    position: relative;
+}
+.legenda-competencias span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 5px;
+    height: 20px;
+    transform: translateY(-50%);
 }
 
 .competencias-container {
@@ -371,12 +444,26 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: 3px;
-    list-style-position: inside;
+    list-style: none;
+}
+.competencias-card li {
+    position: relative;
+}
+.competencias-card li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 5px;
+    height: 20px;
+    transform: translateY(-50%);
 }
 .competencias-card li p {
-    display: inline;
     text-align: justify;
 }
+.avancado::after   { background-color: green; }
+.intermediario::after { background-color: orange; }
+.iniciante::after    { background-color: brown; }
 
 
 
