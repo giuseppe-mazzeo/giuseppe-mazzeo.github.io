@@ -2,22 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
-@keyframes imagem-pulando-feliz {
-    0%   { transform: scaleY(1); }
-    25%  { transform: scaleY(1)   translateY(-10px); }
-    50%  { transform: scaleY(0.6) translateY(10px); }
-    60%  { transform: scaleY(0.6) translateX(5px)  translateY(10px); }
-    65%  { transform: scaleY(0.6) translateX(-5px) translateY(10px); }
-    75%  { transform: scaleY(0.6) translateX(0)    translateY(10px); }
-    100% { transform: scaleY(1)   translateY(0); }
-}
-@keyframes movimentacao-seta {
-    0%   { top: 92px; }
-    25%  { top: 122px; }
-    50%  { top: 152px; }
-    75%  { top: 182px; }
-    100% { top: 212px; opacity: 0%;}
-}
 
 
 
@@ -25,7 +9,8 @@
 :root {
     --fonte-inter: "Inter", sans-serif;
     --fonte-manrope: "Manrope", sans-serif;
-    --cor-cinza-claro: rgb(243, 243, 243);
+    --cor-fonte: rgb(255, 255, 255, .9);
+    --cor-fundo-body: #020315;
 }
 
 
@@ -52,12 +37,14 @@ ul {
 
 
 
+
 body {
     position: relative;
     max-width:  1500px;
     margin: auto;
-    background-color: var(--cor-cinza-claro);
 }
+
+
 
 
 
@@ -66,11 +53,9 @@ header {
     z-index: 1;
     top: 0;
     left: 0;
-    width: calc(100% - 120px);
-    margin: 40px 60px 50px 60px;
+    width: calc(100% - 20px);
+    margin: 10px;
 }
-
-
 
 nav {
     display: flex;
@@ -84,7 +69,7 @@ nav {
     background-color: white;
 }
 
-nav > div {
+nav > h1 {
     cursor: default;
     display: flex;
     flex-direction: row;
@@ -96,13 +81,14 @@ nav > div {
 
 .nome-header {
     font-size: 2.1em;
+    color: black;
 }
-
 .portifolio-header {
     margin-bottom: -9px;
     margin-left: -26px;
     font-size: .9em;
     font-weight: 300;
+    color: black;
 }
 
 .paginas-header {
@@ -113,7 +99,6 @@ nav > div {
     width: 50%;
     height: 20px;
 }
-
 .paginas-header a {
     position: relative;
     display: block;
@@ -123,7 +108,6 @@ nav > div {
     font-size: 1.1em;
     text-decoration: none;
 }
-
 .paginas-header a::after {
     content: '';
     position: absolute;
@@ -136,15 +120,12 @@ nav > div {
     background-color: black;
     transition: width 0.5s ease-in-out;
 }
-
 .paginas-header a:hover:after {
     width: 100%;
 }
-
 .paginas-header li {
     font-weight: 340;
 }
-
 .paginas-header li:nth-of-type(1) {
     font-weight: bold;
 }
@@ -156,19 +137,16 @@ nav > div {
     width: 100px;
     min-width: 20%;
 }
-
 .redes-header li {
     width: 34px;
     height: 34px;
 }
-
 .redes-header li img {
     width: 100%;
     height: 100%;
     border: 3px solid black;
     border-radius: 7px;
 }
-
 .redes-header li:hover img {
     animation: imagem-pulando-feliz infinite 1.5s ease-in-out;
     animation-delay: 0.3s;
@@ -181,41 +159,26 @@ nav > div {
 
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'article-perfil article-sobre-mim';
-    margin: 150px 80px;
-    margin-bottom: 10px;
+    display: flex;
+    margin-top: 150px;
 }
 
-
-
-
 .campo-perfil {
-    grid-area: article-perfil;
-    position: fixed;
-    top: 150px;
-    left: 150px;
     align-self: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 13px;
+    width: 700px;
 }
-
 .campo-perfil > img {
     width: 200px;
     height: auto;
     border-radius: 30px;
     border: 3px solid black;
-    transition: transform 0.5s ease;
 }
 
-.campo-perfil > img:hover {
-    transform: scale(1.05);
-}
 
 .nome-perfil {
     font-size: 1.4em;
@@ -540,219 +503,4 @@ main {
 .campo-interesses ul li,
 .campo-educacao ul li {
     margin-top: 6px;
-}
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 1200px) {
-    .campo-interesses:hover::before,
-    .campo-educacao:hover::before {
-        height: 0;
-    }
-
-    .campo-interesses:not(:hover)::before,
-    .campo-educacao:not(:hover)::before {
-        transition-delay: 1.5s;
-    }
-
-    .campo-interesses:hover::after,
-    .campo-educacao:hover::after {
-        top: 27px;
-    }
-
-    .campo-interesses:not(:hover)::after,
-    .campo-educacao:not(:hover)::after {
-        transition-delay: 2s;
-    }
-
-    .campo-interesses:hover > h2::after {
-        width: 134px;
-    }
-
-    .campo-educacao:hover > h2::after {
-        width: 128px;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    nav {
-        position: relative;
-        align-items: flex-start;
-        height: 140px;
-        padding: 15px 20px;
-        margin: 20px 10px 30px 10px;
-    }
-
-    .portifolio-header {
-        margin-left: -50px;
-        margin-bottom: -15px;
-    }
-
-    .paginas-header a:hover:after {
-        width: 0;
-    }
-
-    .paginas-header {
-        position: absolute;
-        top: 95px;
-        left: 0;
-        width: 100%;
-    }
-
-    .paginas-header a {
-        width: 100px;
-    }
-
-    .redes-header li:hover img {
-        animation: none;
-    }
-    
-    main {
-        position: relative;
-        grid-template-columns: 100%;
-        grid-template-areas: 'article-perfil'
-                             'article-sobre-mim';
-        row-gap: 30px;
-        margin-bottom: 30px;
-    }
-
-    .campo-perfil > img:hover {
-        transform: scale(1);
-    }
-
-    .campo-sobre-mim {
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: 'div-texto-sobre-mim'
-                             'section-educacao'
-                             'section-interesses';
-        row-gap: 60px;
-        margin: 0;
-        margin-bottom: 50px;
-    }
-
-    .campo-sobre-mim > div:first-child {
-        grid-area: div-texto-sobre-mim;
-        position: relative;
-    }
-
-    .campo-sobre-mim > div:first-child::after {
-        display: none;
-    }
-
-    .campo-sobre-mim > div:first-child > span {
-        display: none;
-    }
-
-    .campo-sobre-mim > div:first-child > span span {
-        display: none;
-    }
-
-    .campo-sobre-mim > div > div {
-        padding: 0;
-    }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 1200px) {
-    nav {
-        position: relative;
-        align-items: flex-start;
-        height: 140px;
-        padding: 15px 20px;
-        margin: 20px 10px 30px 10px;
-    }
-
-    .portifolio-header {
-        margin-left: -50px;
-        margin-bottom: -15px;
-    }
-
-    .paginas-header {
-        position: absolute;
-        top: 95px;
-        left: 0;
-        width: 100%;
-    }
-
-    .paginas-header a {
-        width: 100px;
-    }
-
-    .redes-header a:hover:after {
-        width: 0;
-    }
-
-    .redes-header li:hover img {
-        animation: none;
-    }
-    
-    main {
-        position: relative;
-        grid-template-columns: 100%;
-        grid-template-areas: 'article-perfil'
-                             'article-sobre-mim';
-        row-gap: 30px;
-        margin-bottom: 70px;
-    }
-
-    .campo-perfil > img:hover {
-        transform: scale(1);
-    }
-
-    .campo-sobre-mim {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: 'div-texto-sobre-mim div-texto-sobre-mim'
-                             'section-interesses section-educacao';
-        row-gap: 25px;
-        margin: auto;
-    }
-
-    .campo-sobre-mim > div:first-child {
-        grid-area: div-texto-sobre-mim;
-        position: relative;
-    }
-
-    .campo-sobre-mim > div:first-child::after {
-        display: none;
-    }
-
-    .campo-sobre-mim > div:first-child > span {
-        display: none;
-    }
-
-    .campo-sobre-mim > div:first-child > span span {
-        display: none;
-    }
-
-    .campo-sobre-mim > div > div {
-        padding: 0;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .paginas-header {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 300px;
-        border-radius: 0 0 10px 10px;
-        font-size: 1.3em;
-        background-color: white;
-    }
-
-    .paginas-header li a {
-        width: 100%;
-    }
-
-    main {
-        margin-top: 300px;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
 }
